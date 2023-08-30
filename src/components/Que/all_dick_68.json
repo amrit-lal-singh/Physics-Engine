@@ -8,8 +8,8 @@
                 177.57359312880715
             ],
             "acceleration": [
-                4.67,
-                0.9
+                5.2,
+                1.38
             ],
             "forces": {
                 "y": [
@@ -41,7 +41,7 @@
             ],
             "acceleration": [
                 0.0,
-                -2.1907
+                -0.9763
             ],
             "forces": {
                 "y": [
@@ -69,12 +69,12 @@
         "number": 2,
         "mass": 60,
         "acceleration": [
-            2.1907,
+            3.82,
             0
         ],
         "size": [
-            50,
-            50
+            200,
+            200
         ],
         "type": "tr",
         "langle": 45,
@@ -139,7 +139,7 @@
             "radius": 10,
             "acceleration": [
                 0,
-                -2.1907
+                -0.9763
             ],
             "initvelocity": [
                 0,
@@ -215,7 +215,7 @@
     "normal dick": {
         "1": {
             "force": [
-                21.213
+                21.21
             ],
             "number": 1,
             "objects": [

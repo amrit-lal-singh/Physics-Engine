@@ -3,12 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { questionData } from './../old code/Questions/Questiondata.js';
 import Steps from './StepsComponent/Steps.js';
 import ChatGptInput from './GptInputComponent/gptInput.js';
+import CharacterDisplay from './GptInputComponent/displayChar';
+
 import './question.css'
 import { Row, Col, Button, Form, Radio, Alert, message, Input, Space } from 'antd';
 import { useParams } from 'react-router';
 import { FcApproval, FcDisapprove } from "react-icons/fc";
 import ginone from './AUDIOS/stepOne/step_one_audioek.mp3'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
     Card,
@@ -21,9 +23,11 @@ import TestThree from './animated.js';
 var Latex = require('react-latex');
 
 const Questions = (props) => {
+    const navigate = useNavigate();
     const [form] = Form.useForm();
     const { quesId } = useParams();
     const quesNo = parseInt(quesId) - 1;
+    const [chatText, setchatText] = useState('');
     const [stepSelected, setStepSelected] = useState(1);
     const [selectedAnswer, setSelectedAnswer] = useState("");
     const chapterNumber = 1;
@@ -33,7 +37,7 @@ const Questions = (props) => {
     const [stepCount, setStepCount] = useState(0);
     const [currentQue, setcurrentQue] = useState(0);
     const [step, setSteps] = useState(questionData[parseInt(quesId) - 1].steps);
-    const stepDetails = questionDetails.steps.filter(step => step.stepNumber === stepSelected)[0];
+    //let stepDetails = questionDetails.steps.filter(step => step.stepNumber === stepSelected)[0];
     const [showError, setShowError] = useState(false)
     const [showPrint, setShowPrint] = useState(false);
     const [start, setStart] = useState(false);
@@ -44,8 +48,15 @@ const Questions = (props) => {
     const [advtobas, setadvtobas] = useState(0);
     const [bgfchead, setbgfchead] = useState("white")
     const [click, setclick] = useState(5);
+    const [audioFlag, setaudiofalg] = useState(false);
+    const [stepDetails, setStepDetails] = useState(questionDetails.steps.filter(step => step.stepNumber === stepSelected)[0])
+
+    useEffect(() => {
+        setStepDetails(questionDetails.steps.filter(step => step.stepNumber === stepSelected)[0])
+    }, []);
 
     const changeStep = (data) => {
+        debugger
         setStepSelected(data.stepNumber);
         setcurrentQue(0);
         setAnswerClicked(0);
@@ -86,7 +97,7 @@ const Questions = (props) => {
             setclick(5);
             setTimeout(() => {
                 changeQuetion(); // Assuming changeQuetion is the function to change the question
-            }, 1000)
+            }, 2000)
 
         } else {
             incorrect();
@@ -117,6 +128,7 @@ const Questions = (props) => {
             //change the step
             let newStep = [...step];
             var c = stepCount;
+            setStepDetails(questionDetails.steps[stepCount + 1])
             setStepCount(stepCount + 1);
             newStep[c].stepStatus = 'inactive';
             newStep[c + 1].stepStatus = 'active';
@@ -157,13 +169,37 @@ const Questions = (props) => {
         }
     }
 
-    const handleChange = (a, b) => {
+    const handleChange = (stepNo, subStep, text) => {
         debugger
-        //setSteps(a);
-        setcurrentQue(0);
-        //setStepSelected(a + 1);
+
+        try {
+            setchatText(text)
+            setStepDetails(questionDetails.steps[stepNo])
+            let newStep = [...step];
+            var c = stepCount;
+            setStepCount(stepNo);
+            newStep[c].stepStatus = 'inactive';
+            newStep[stepNo].stepStatus = 'active';
+            setSteps(newStep);
+            setcurrentQue(subStep);
+            setStepSelected(stepNo)
+            console.log(stepDetails.stepQuestions[currentQue].threejsstep)
+        }
+        catch {
+            console.log(props)
+        }
+
+        //setStepSelected(3); stepDetails.stepQuestions[currentQue].threejsstep
     }
 
+    const haldleAudio = () => {
+        debugger
+        setaudiofalg(true)
+    }
+
+    const handleEquationClick = ()=>{
+        handleChange(1,1)
+    }
 
     return (
         <Container className='impcont' >
@@ -174,7 +210,7 @@ const Questions = (props) => {
 
                     <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} />
                     <Col span={24} className="eqa">
-                        <div className='print' style={{
+                        <div className='euqtionType' style={{
                             fontWeight: "bold", textAlign: "center", backgroundColor: bgfchead
                         }}
                         >{fchead}</div>
@@ -202,6 +238,7 @@ const Questions = (props) => {
                                 </div>
                                 <Button type="primary" onClick={handleStart}> Start </Button>
 
+
                             </Col>
                             {start &&
 
@@ -224,6 +261,7 @@ const Questions = (props) => {
                                                         stepans={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].options[stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].answer]}
                                                         click={click}
                                                         type={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].type}
+                                                        audioflag={audioFlag}
                                                     />
                                                 </div>
                                             </CardBody>
@@ -270,7 +308,7 @@ const Questions = (props) => {
 
                                             {!showPrint && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show1.map((data, idx) => (
 
-                                                <div className='print' style={{ fontWeight: "bold" }}
+                                                <div onClick={handleEquationClick} className='euqtionType' style={{ fontWeight: "bold" }}
                                                 >{data}</div>
                                             ))}
                                             {showPrint && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show2.map((data, idx) => (
@@ -289,9 +327,13 @@ const Questions = (props) => {
 
                         </Row>
                     </Form>
-                    <Col span={24} >
-                        <ChatGptInput handleChange={handleChange} questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} ></ChatGptInput>
-                    </Col>
+                    {start &&
+                        <Col span={24} >
+
+                            {chatText && <CharacterDisplay text={chatText} />}
+                            <ChatGptInput handleChange={handleChange} questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} ></ChatGptInput>
+                        </Col>
+                    }
                 </Col>
             </Row >
 

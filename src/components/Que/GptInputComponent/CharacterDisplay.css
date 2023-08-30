@@ -1,0 +1,27 @@
+.text-container {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    position: relative;
+  }
+  
+  .cursor {
+    color: #1a1a1a;
+    font-weight: bold;
+    opacity: 0.8;
+    padding-left: 2px;
+  }
+  
+  .cursor.blink {
+    animation: blink-animation 0.8s step-end infinite;
+  }
+  
+  @keyframes blink-animation {
+    50% {
+      opacity: 0;
+    }
+  }
+  

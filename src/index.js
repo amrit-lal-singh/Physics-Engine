@@ -18,6 +18,7 @@ import Nlmadvance from "./components/Que/Shownewtolaw/Nlmadvance";
 import Feedback from "./components/Que/Feedback";
 import Dashboard from "./components/Que/Dashboard/Home";
 import Videos from "./components/Que/Videos/chaptervid";
+import ErrorPage from "./components/Que/errorpage";
 
 
 const root = ReactDOM.createRoot(
@@ -29,6 +30,8 @@ root.render(
       <Route path="/" element={<Login />} />
       <Route path="login" element={<Login />} />
       <Route path="home" element={<Home />} />
+      <Route path="error" element={<ErrorPage />} />
+
       <Route path="home/:quesId" element={<Home />} />
       <Route path="chapters" element={<Chapter />} />
       {/* <Route path="quegrid" element={<Quegrid />} /> */}

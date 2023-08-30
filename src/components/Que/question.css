@@ -16,6 +16,13 @@
     padding: 2%;
 
 }
+.euqtionType{
+  border: 1px solid rgb(114, 143, 236);
+  padding: 2%;
+font-weight: bold;
+cursor: pointer;
+text-decoration: underline;
+}
 
 
 .nextQue {

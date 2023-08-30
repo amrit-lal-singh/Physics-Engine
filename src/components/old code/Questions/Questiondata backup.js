@@ -6162,8 +6162,13 @@ export const questionData = [
         stepStatus: "inactive",
         stepNumber: 2,
       },
-      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 3 },
-      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 4 },
+      {
+        stepName: "Understanding Constraint equation",
+        stepStatus: "inactive",
+        stepNumber: 3,
+      },
+      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 4 },
+      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 5 },
     ],
     questions: [
       {
@@ -6504,8 +6509,294 @@ export const questionData = [
             ],
           },
           {
-            stepName: "Constraint Equations",
+            stepName: "Constraint Understanding",
             stepNumber: 3,
+            stepQuestions: [
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 1,
+                threejssubsubstep: [0, 5],
+                show1: [],
+                show2: ["Rate of change of length of the string is 5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 2,
+                threejssubsubstep: [0, -5],
+                show1: [],
+                show2: ["Rate of change of length of the string is -5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
+                options: [3, -3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 3,
+                threejssubsubstep: [3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is -3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 4,
+                threejssubsubstep: [-3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is 3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 5,
+                threejssubsubstep: [3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 6,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [-2, 2, -8, 8],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 7,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [5, -5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 8,
+                threejssubsubstep: [-3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 9,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [2, 8, -2, -8],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 10,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [5, -5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 11,
+                threejssubsubstep: [3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 12,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [-2, 2, -8, 8],
+                answer: 2,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 13,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 14,
+                threejssubsubstep: [-3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 15,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [-2, 2, 8, -8],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 16,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+            ],
+          },
+          {
+            stepName: "Constraint Equations",
+            stepNumber: 4,
             stepQuestions: [
               {
                 question:
@@ -6724,7 +7015,7 @@ export const questionData = [
           },
           {
             stepName: "Final Answers",
-            stepNumber: 4,
+            stepNumber: 5,
             stepQuestions: [
               {
                 question:
@@ -9064,9 +9355,13 @@ export const questionData = [
         stepStatus: "inactive",
         stepNumber: 2,
       },
-
-      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 3 },
-      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 4 },
+      {
+        stepName: "Understanding Constraint equation",
+        stepStatus: "inactive",
+        stepNumber: 3,
+      },
+      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 4 },
+      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 5 },
     ],
     questions: [
       {
@@ -9504,8 +9799,294 @@ export const questionData = [
             ],
           },
           {
-            stepName: "Constraint Equations",
+            stepName: "Constraint Understanding",
             stepNumber: 3,
+            stepQuestions: [
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
+                options: [5, -5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 1,
+                threejssubsubstep: [0, 5],
+                show1: [],
+                show2: ["Rate of change of length of the string is 5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
+                options: [5, -5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 2,
+                threejssubsubstep: [0, -5],
+                show1: [],
+                show2: ["Rate of change of length of the string is -5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 3,
+                threejssubsubstep: [3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is -3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 4,
+                threejssubsubstep: [-3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is 3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 5,
+                threejssubsubstep: [3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 6,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [2, -8, 8, -2],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 7,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 8,
+                threejssubsubstep: [-3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 9,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [2, -8, 8, -2],
+                answer: 2,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 10,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 11,
+                threejssubsubstep: [3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 12,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [2, -2, 8, -8],
+                answer: 3,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 13,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 14,
+                threejssubsubstep: [-3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 15,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [-2, 8, -8, 2],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 16,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+            ],
+          },
+          {
+            stepName: "Constraint Equations",
+            stepNumber: 4,
             stepQuestions: [
               {
                 question:
@@ -9867,7 +10448,7 @@ export const questionData = [
           },
           {
             stepName: "Final Answers",
-            stepNumber: 4,
+            stepNumber: 5,
             stepQuestions: [
               {
                 question:
@@ -13162,8 +13743,13 @@ export const questionData = [
         stepStatus: "inactive",
         stepNumber: 2,
       },
-      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 3 },
-      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 4 },
+      {
+        stepName: "Understanding Constraint equation",
+        stepStatus: "inactive",
+        stepNumber: 3,
+      },
+      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 4 },
+      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 5 },
     ],
     questions: [
       {
@@ -13601,8 +14187,294 @@ export const questionData = [
             ],
           },
           {
-            stepName: "Constraint Equations",
+            stepName: "Constraint Understanding",
             stepNumber: 3,
+            stepQuestions: [
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
+                options: [5, -5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 1,
+                threejssubsubstep: [0, 5],
+                show1: [],
+                show2: ["Rate of change of length of the string is 5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 2,
+                threejssubsubstep: [0, -5],
+                show1: [],
+                show2: ["Rate of change of length of the string is -5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 3,
+                threejssubsubstep: [3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is -3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 4,
+                threejssubsubstep: [-3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is 3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 5,
+                threejssubsubstep: [3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 6,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [8, -8, -2, 2],
+                answer: 3,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 7,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [5, -5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 8,
+                threejssubsubstep: [-3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 9,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [-2, 2, -8, 8],
+                answer: 3,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 10,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 11,
+                threejssubsubstep: [3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 12,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [8, 2, -2, -8],
+                answer: 3,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 13,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [5, -5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 14,
+                threejssubsubstep: [-3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 15,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [8, -2, 2, -8],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 16,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+            ],
+          },
+          {
+            stepName: "Constraint Equations",
+            stepNumber: 4,
             stepQuestions: [
               {
                 question:
@@ -13864,7 +14736,7 @@ export const questionData = [
           },
           {
             stepName: "Final Answers",
-            stepNumber: 4,
+            stepNumber: 5,
             stepQuestions: [
               {
                 question:
@@ -15024,7 +15896,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -15472,7 +16344,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -15959,7 +16831,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -16407,7 +17279,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -16894,7 +17766,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -16913,7 +17785,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -17381,7 +18253,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -17400,7 +18272,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -17868,7 +18740,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -17887,7 +18759,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -17968,7 +18840,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -18423,7 +19295,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -18442,7 +19314,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -18570,7 +19442,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -19043,7 +19915,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -19062,7 +19934,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -19143,7 +20015,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -19598,7 +20470,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -19617,7 +20489,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -20218,7 +21090,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -20237,7 +21109,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -20318,7 +21190,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -20900,7 +21772,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -21377,7 +22249,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -21519,7 +22391,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -22083,7 +22955,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -22229,7 +23101,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -23142,8 +24014,13 @@ export const questionData = [
         stepStatus: "inactive",
         stepNumber: 2,
       },
-      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 3 },
-      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 4 },
+      {
+        stepName: "Understanding Constraint equation",
+        stepStatus: "inactive",
+        stepNumber: 3,
+      },
+      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 4 },
+      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 5 },
     ],
     questions: [
       {
@@ -23222,7 +24099,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -23414,8 +24291,294 @@ export const questionData = [
             ],
           },
           {
-            stepName: "Constraint Equations",
+            stepName: "Constraint Understanding",
             stepNumber: 3,
+            stepQuestions: [
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 1,
+                threejssubsubstep: [0, 5],
+                show1: [],
+                show2: ["Rate of change of length of the string is 5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 2,
+                threejssubsubstep: [0, -5],
+                show1: [],
+                show2: ["Rate of change of length of the string is -5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 3,
+                threejssubsubstep: [3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is -3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 4,
+                threejssubsubstep: [-3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is 3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 5,
+                threejssubsubstep: [3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 6,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [-2, 8, 2, -8],
+                answer: 2,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 7,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [5, -5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 8,
+                threejssubsubstep: [-3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 9,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [-2, 2, -8, 8],
+                answer: 3,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 10,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 11,
+                threejssubsubstep: [3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 12,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [-8, 8, 2, -2],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 13,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 14,
+                threejssubsubstep: [-3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 15,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [-2, 8, 2, -8],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 16,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+            ],
+          },
+          {
+            stepName: "Constraint Equations",
+            stepNumber: 4,
             stepQuestions: [
               {
                 question:
@@ -23526,7 +24689,7 @@ export const questionData = [
           },
           {
             stepName: "Final Answers",
-            stepNumber: 4,
+            stepNumber: 5,
             stepQuestions: [
               {
                 question:
@@ -23635,7 +24798,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -24338,7 +25501,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -25230,7 +26393,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -25372,7 +26535,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -26128,7 +27291,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -26316,7 +27479,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 3 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 3,
                 threejssubsubstep: 1,
@@ -27332,8 +28495,13 @@ export const questionData = [
         stepStatus: "inactive",
         stepNumber: 2,
       },
-      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 3 },
-      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 4 },
+      {
+        stepName: "Understanding Constraint equation",
+        stepStatus: "inactive",
+        stepNumber: 3,
+      },
+      { stepName: "Constraint", stepStatus: "inactive", stepNumber: 4 },
+      { stepName: "Final answer", stepStatus: "inactive", stepNumber: 5 },
     ],
     questions: [
       {
@@ -27422,7 +28590,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -27774,8 +28942,294 @@ export const questionData = [
             ],
           },
           {
-            stepName: "Constraint Equations",
+            stepName: "Constraint Understanding",
             stepNumber: 3,
+            stepQuestions: [
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards right with speed 5 m/s",
+                options: [5, -5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 1,
+                threejssubsubstep: [0, 5],
+                show1: [],
+                show2: ["Rate of change of length of the string is 5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the dog is moving towards left with speed 5 m/s",
+                options: [5, -5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 2,
+                threejssubsubstep: [0, -5],
+                show1: [],
+                show2: ["Rate of change of length of the string is -5 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards right with speed 3 m/s",
+                options: [3, -3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 3,
+                threejssubsubstep: [3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is -3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string if the human is moving towards left with speed 3 m/s",
+                options: [-3, 3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 4,
+                threejssubsubstep: [-3, 0],
+                show1: [],
+                show2: ["Rate of change of length of the string is 3 m/s"],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 5,
+                threejssubsubstep: [3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [-3, 3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 6,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [8, -2, -8, 2],
+                answer: 3,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 7,
+                threejssubsubstep: [3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in right direction with speed 5 m/s",
+                options: [5, -5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 8,
+                threejssubsubstep: [-3, 5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 9,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards right direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [8, -8, 2, -2],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 10,
+                threejssubsubstep: [-3, 5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is 5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is 8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 11,
+                threejssubsubstep: [3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in right direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 1,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 12,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in right direction with speed 3 m/s",
+                options: [-8, 2, 8, -2],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 13,
+                threejssubsubstep: [3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is -3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -8m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of dog in left direction with speed 5 m/s",
+                options: [-5, 5],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 14,
+                threejssubsubstep: [-3, -5],
+                show1: [],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "What is the rate of change of the length of string only due to motion of human in left direction with speed 3 m/s",
+                options: [3, -3],
+                answer: 0,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 15,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+              {
+                question:
+                  "Net rate of change of length due to dog moving towards left direction with speed 5 m/s  and human moving in left direction with speed 3 m/s",
+                options: [2, 8, -2, -8],
+                answer: 2,
+                threejsstep: "constraint Understanding",
+                threejssubstep: 16,
+                threejssubsubstep: [-3, -5],
+                show1: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                ],
+                show2: [
+                  "Rate of change of length of the string due tp motion of dog is -5 m/s",
+                  "Rate of change of length of the string due tp motion of huamn is 3 m/s",
+                  "Total Rate of change of length of the string due motion of both human and dog is -2m/s",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
+            ],
+          },
+          {
+            stepName: "Constraint Equations",
+            stepNumber: 4,
             stepQuestions: [
               {
                 question:
@@ -28072,7 +29526,7 @@ export const questionData = [
           },
           {
             stepName: "Final Answers",
-            stepNumber: 4,
+            stepNumber: 5,
             stepQuestions: [
               {
                 question:
@@ -28221,7 +29675,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -28367,7 +29821,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -29384,7 +30838,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -29535,7 +30989,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -30227,7 +31681,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -30378,7 +31832,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -31713,7 +33167,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -31859,7 +33313,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -32886,7 +34340,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -33037,7 +34491,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -34137,7 +35591,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b3?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -34270,7 +35724,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 3 due to b2?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 3,
                 threejssubsubstep: 1,
@@ -34297,7 +35751,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 3 due to c1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 3,
                 threejssubsubstep: 2,
@@ -34891,7 +36345,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -35005,7 +36459,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -35531,7 +36985,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -35645,7 +37099,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -36171,7 +37625,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -36190,7 +37644,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -36285,7 +37739,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -36811,7 +38265,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -36830,7 +38284,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -36925,7 +38379,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -37451,7 +38905,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -37470,7 +38924,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -37565,7 +39019,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -38616,7 +40070,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -38762,7 +40216,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -39474,7 +40928,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -40079,7 +41533,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -40594,7 +42048,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -41330,7 +42784,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -42040,7 +43494,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -42059,7 +43513,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -42180,7 +43634,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -42760,7 +44214,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -42917,7 +44371,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -43500,7 +44954,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -43657,7 +45111,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -44352,7 +45806,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -45094,7 +46548,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -45117,7 +46571,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -45248,7 +46702,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -46085,7 +47539,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -46108,7 +47562,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -46239,7 +47693,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -47056,7 +48510,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -47079,7 +48533,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -47210,7 +48664,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -49740,7 +51194,7 @@ export const questionData = [
       {
         questionNumber: 68,
         questionDesc:
-          "A red block of mass 3 kg and yellow block of mass 6 kg are in motion as follows. Determine the acceleration of the masses, tension in the string and normal reaction exerted on the big block. Ignore the normal reaction between wedge and ground. Mass of wedge is 6 kg.",
+          "A red block of mass 3 kg and yellow block of mass 4 kg are in motion as follows. Determine the acceleration of the masses, tension in the string and normal reaction exerted on the big block. Ignore the normal reaction between wedge and ground.",
         steps: [
           {
             stepName: "Identify Motion of objects",
@@ -49754,7 +51208,7 @@ export const questionData = [
                 threejssubstep: 0,
                 threejssubsubstep: -1,
                 show1: [""],
-                show2: ["Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge)"],
+                show2: ["Unknowns: a\u2081, a\u2082, a\u2083, a\u2084"],
                 showfc: [],
                 type: "basic",
                 showfcheading: [],
@@ -49766,9 +51220,9 @@ export const questionData = [
                 threejsstep: "motion",
                 threejssubstep: 1,
                 threejssubsubstep: 0,
-                show1: ["Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge)"],
+                show1: ["Unknowns: a\u2081, a\u2082, a\u2083, a\u2084"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, ",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, ",
                 ],
                 showfc: [],
                 type: "basic",
@@ -49782,10 +51236,10 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: 0,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
                 ],
                 type: "basic",
                 showfc: [],
@@ -49806,10 +51260,10 @@ export const questionData = [
                     threejssubstep: 0,
                     threejssubsubstep: 4,
                     show1: [
-                    "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
+                    "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, a\u2084, T\u2081, T\u2082, N\u2081, ",
                     ],
                     show2: [
-                    "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
+                    "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
                     "Acceleration of Red Block wrt Wedge:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                     ],
                     type: "basic",
@@ -49825,12 +51279,12 @@ export const questionData = [
                     threejssubstep: 0,
                     threejssubsubstep: 3,
                     show1: [
-                    "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
+                    "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
                     "Acceleration of Red Block wrt Wedge: a\u2081 ( up the incline ) + a\u2084 ( right )",
                     ],
                     show2: [
-                        "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                        "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                     ],
                     type: "basic",
                     showfc: [],
@@ -49850,12 +51304,12 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: -100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 type: "basic",
                 showfc: [
@@ -49875,12 +51329,12 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: -200,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 type: "basic",
                 answer: 1,
@@ -49900,12 +51354,12 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 type: "basic",
                 answer: 0,
@@ -49929,12 +51383,12 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 type: "basic",
                 showfc: [
@@ -49949,18 +51403,18 @@ export const questionData = [
                 question:
                   "Whats the FBD equation of red block along the incline?",
                 options: [
-                  "+T\u2081+30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "+T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "-T\u2081+30sin(45\u00b0)=3a\u2081-3a\u2084cos(45\u00b0)",
-                  "-T\u2081-30sin(45\u00b0)=3a\u2081-3a\u2084cos(45\u00b0)",
+                  "+T\u2081+30sin(45\u00b0)=3a\u2081",
+                  "+T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "-T\u2081+30sin(45\u00b0)=3a\u2081",
+                  "-T\u2081-30sin(45\u00b0)=3a\u2081",
                 ],
                 answer: 1,
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 showfc: [
                   "Upward Perpendicular Forces: N1, ",
@@ -49970,9 +51424,9 @@ export const questionData = [
                 ],
                 showfcheading: ["Red block"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                 ],
                 type: "basic",
               },
@@ -49980,17 +51434,17 @@ export const questionData = [
                 question:
                   "Whats the FBD equation of red block perpendicular to the incline?",
                 options: [
-                  "30cos(45\u00b0-N\u2081=3a\u2084cos(45\u00b0)",
-                  "30cos(45\u00b0+N\u2081=3a\u2084sin(45\u00b0)",
+                  "+N\u2081-30cos(45\u00b0)=0",
+                  "-N\u2081-30cos(45\u00b0)=0",
                 ],
                 answer: 0,
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081 + 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                 ],
                 showfc: [
                   "Upward Perpendicular Forces: N1, ",
@@ -50000,10 +51454,10 @@ export const questionData = [
                 ],
                 showfcheading: ["Red block"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2084sin(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 type: "basic",
               },
@@ -50015,15 +51469,15 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: -100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 type: "basic",
@@ -50045,15 +51499,15 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 type: "basic",
@@ -50079,9 +51533,9 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 showfc: [
@@ -50092,9 +51546,9 @@ export const questionData = [
                 ],
                 showfcheading: ["Yellow block"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
@@ -50108,16 +51562,16 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: -100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
@@ -50140,15 +51594,15 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
@@ -50171,15 +51625,15 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
@@ -50202,15 +51656,15 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 3,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
@@ -50233,8 +51687,8 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
@@ -50247,8 +51701,8 @@ export const questionData = [
                 ],
                 showfcheading: ["Third pulley"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
@@ -50264,12 +51718,12 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: -200,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 type: "basic",
                 answer: 1,
@@ -50289,12 +51743,12 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                 ],
                 type: "basic",
                 answer: 0,
@@ -50314,14 +51768,14 @@ export const questionData = [
                 threejssubstep: 3,
                 threejssubsubstep: -100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
@@ -50344,14 +51798,14 @@ export const questionData = [
                 threejssubstep: 3,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
@@ -50373,14 +51827,14 @@ export const questionData = [
                 threejssubstep: 3,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
@@ -50397,19 +51851,19 @@ export const questionData = [
                 question:
                   "Whats the FBD equation of big block in the x-direction",
                 options: [
-                  "N\u2081cos(45\u00b0)+T\u2081cos(45\u00b0)-T\u2081=6a\u2084",
-                  "N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
-                  "N\u2081sin(45\u00b0)-T\u2081sin(45\u00b0)+T\u2081=6a\u2084",
-                  "N\u2081cos(45\u00b0)+T\u2081cos(45\u00b0)-T\u2081=6a\u2084",
+                  "Ncos(45\u00b0)+T\u2081cos(45\u00b0)-T\u2081=6a\u2084",
+                  "Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Nsin(45\u00b0)-T\u2081sin(45\u00b0)+T\u2081=6a\u2084",
+                  "Ncos(45\u00b0)+T\u2081cos(45\u00b0)-T\u2081=6a\u2084",
                 ],
                 answer: 1,
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 showfc: [
@@ -50420,12 +51874,12 @@ export const questionData = [
                 ],
                 showfcheading: ["Big Block"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084"
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084"
                 ],
                 type: "basic",
               },
@@ -50444,19 +51898,19 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: -1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
@@ -50466,60 +51920,31 @@ export const questionData = [
               },
               {
                 question:
-                  "What is double derivative of change in l\u2081 for pink string due to red block? Hint: a\u2081 is with respect to bigblock",
+                  "What is double derivative of change in l\u2081 for pink string due to red block?",
                 options: ["+a\u2081", "-a\u2081"],
                 answer: 1,
                 threejsstep: "constraint",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 type: "basic",
-                showfc: ["l\u2081 + l\u2082 + l\u2083 + l\u2084 = constant"],
-                showfcheading: ["Pink string"],
-              },
-              {
-                question:
-                  "What is double derivative of change in l\u2082 for pink string due to first pulley?",
-                options: ["+a\u2084", "-a\u2084"],
-                answer: 1,
-                threejsstep: "constraint",
-                threejssubstep: 6,
-                threejssubsubstep: 1,
-                show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
-                  "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
-                  "Second pulley: -2T\u2081+T\u2082=0",
-                ],
-                show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
-                  "Yellow block: +60-T\u2082=6a\u2082",
-                  "Second pulley: -2T\u2081+T\u2082=0",
-                ],
-                type: "basic",
-                showfc: ["l\u2081 + l\u2082 + l\u2083 + l\u2084  = constant"],
+                showfc: ["l\u2081 + l\u2082 + l\u2083 = constant"],
                 showfcheading: ["Pink string"],
               },
               {
@@ -50531,24 +51956,24 @@ export const questionData = [
                 threejssubstep: 3,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 type: "basic",
-                showfc: ["l\u2081 + l\u2082 + l\u2083 + l\u2084  = constant"],
+                showfc: ["l\u2081 + l\u2082 + l\u2083 = constant"],
                 showfcheading: ["Pink string"],
               },
               {
@@ -50560,63 +51985,62 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 type: "basic",
-                showfc: ["l\u2081 + l\u2082 + l\u2083 + l\u2084 = constant"],
+                showfc: ["l\u2081 + l\u2082 + l\u2083 = constant"],
                 showfcheading: ["Pink string"],
               },
               {
                 question: "What is the constraint equation for pink string?",
                 options: [
-                  "+a\u2081+2a\u2083+a\u2084=0",
-                  "+a\u2081-2a\u2083-a\u2084=0",
-                  "-a\u2081+2a\u2083-a\u2084=0",
-                  "-a\u2081-2a\u2083+a\u2084=0",
+                  "+a\u2081+2a\u2083=0",
+                  "+a\u2081-2a\u2083=0",
+                  "-a\u2081+2a\u2083=0",
+                  "-a\u2081-2a\u2083=0",
                 ],
                 answer: 2,
                 threejsstep: "constraint",
                 threejssubstep: 1,
                 threejssubsubstep: 300,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+3a\u2084cos(45\u00b0)",
-                  "Red block: -N\u2081+30cos(45\u00b0)=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 type: "basic",
                 showfc: [
                   "l\u2081 + l\u2082 + l\u2083 = constant",
                   "l\u2081'' = -a\u2081",
-                  "l\u2082'' = -a\u2084",
+                  "l\u2082'' = +a\u2083",
                   "l\u2083'' = +a\u2083",
-                  "l\u2084'' = +a\u2083"
                 ],
                 showfcheading: ["Pink string"],
               },
@@ -50629,23 +52053,23 @@ export const questionData = [
                 threejssubstep: 4,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 type: "basic",
                 showfc: ["l\u2081 = constant"],
@@ -50660,23 +52084,23 @@ export const questionData = [
                 threejssubstep: 4,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 type: "basic",
                 showfc: ["l\u2081 = constant"],
@@ -50695,23 +52119,23 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: 300,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                   "Red string: +a\u2082-a\u2083=0",
                 ],
                 type: "basic",
@@ -50728,40 +52152,39 @@ export const questionData = [
                 question:
                   "What are the final accelerations, tensions and normal reactions?",
                 options: [
-                  "a\u2081 = 0.2801, a\u2082= 1.845, a\u2083= 1.845, a\u2084= 3.4101, T\u2081= 24.4644, T\u2082= 48.9289, N\u2081= 18.8019",
-                  "a\u2081= 162.18, a\u2082= 540.5, a\u2083= -2.97, a\u2084= 2.11, T\u2081= -5.94, T\u2082= 9.85, N\u2081= 105.65",
-                  "a\u2081= 17.73, a\u2082= 540.5, a\u2083= 105.65, a\u2084= -3.24, T\u2081= -7.92, T\u2082= -6.93, N\u2081= 108.12",
-                  "a\u2081= 63.39, a\u2082= 19.7, a\u2083= -1.98, a\u2084= 6.44, T\u2081= 270.3, T\u2082= 378.35, N\u2081= -9.9",
+                  "a\u2081 = 1.952, a\u2082= -0.9763, a\u2083= -0.9763, T\u2081= 27.07, T\u2082= 54.14, N\u2081= 21.21",
+                  "a\u2081= 162.18, a\u2082= 540.5, a\u2083= -2.97, T\u2081= -5.94, T\u2082= 9.85, N\u2081= 105.65",
+                  "a\u2081= 17.73, a\u2082= 540.5, a\u2083= 105.65, T\u2081= -7.92, T\u2082= -6.93, N\u2081= 108.12",
+                  "a\u2081= 63.39, a\u2082= 19.7, a\u2083= -1.98, T\u2081= 270.3, T\u2082= 378.35, N\u2081= -9.9",
                 ],
                 answer: 0,
                 threejsstep: "motion",
                 threejssubstep: 0,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
-                  "Red block: 30cos(45\u00b0)-N\u2081=3a\u2084sin(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
+                  "Big Block: Nsin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                   "Red string: +a\u2082-a\u2083=0",
                 ],
                 showfc: [],
                 showfcheading: [],
                 tobeshown: 1,
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), a\u2084(wedge), T\u2081, T\u2082, N\u2081",
-                        "Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
-                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081+ 3a\u2084cos(45\u00b0)",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, a\u2084, T\u2081, T\u2082, N\u2081, ",
+                        "Acceleration of Red Block:\n a\u2081 ( up the incline ) + a\u2084 ( right )",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
                   "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
-                  "Big Block: N\u2081sin(45\u00b0)-T\u2081cos(45\u00b0)+T\u2081=6a\u2084",
                   "Second pulley: -2T\u2081+T\u2082=0",
-                  "Pink string: -a\u2081+2a\u2083-a\u2084=0",
+                  "Pink string: -a\u2081+2a\u2083=0",
                   "Red string: +a\u2082-a\u2083=0",
-                  "Final Answers: a\u2081 = 0.7382, a\u2082= -2.1907, a\u2083= -2.1907, a\u2084= 3.6432, T\u2081= 23.4278, T\u2082= 46.8556, N\u2081= 21.213",
+                  "Final Answers: a\u2081 = 1.952, a\u2082= -0.9763, a\u2083= -0.9763, T\u2081= 27.07, T\u2082= 54.14, N\u2081= 21.21",
                 ],
               },
             ],
@@ -50801,7 +52224,7 @@ export const questionData = [
                 threejssubstep: 0,
                 threejssubsubstep: -1,
                 show1: [""],
-                show2: ["Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley)"],
+                show2: ["Unknowns: a\u2081, a\u2082, a\u2083"],
                 showfc: [],
                 type: "basic",
                 showfcheading: [],
@@ -50813,14 +52236,31 @@ export const questionData = [
                 threejsstep: "motion",
                 threejssubstep: 1,
                 threejssubsubstep: 0,
-                show1: ["Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley)"],
+                show1: ["Unknowns: a\u2081, a\u2082, a\u2083"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082, ",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
                 ],
                 showfc: [],
                 type: "basic",
                 showfcheading: [],
-              }
+              },
+              {
+                question: "How many contacting surfaces are there?",
+                options: [3, 1, 2, 0],
+                answer: 1,
+                threejsstep: "motion",
+                threejssubstep: 2,
+                threejssubsubstep: 0,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                ],
+                type: "basic",
+                showfc: [],
+                showfcheading: [],
+              },
             ],
           },
           {
@@ -50829,19 +52269,67 @@ export const questionData = [
             stepQuestions: [
               {
                 question:
+                  ". How many surfaces are in contact with the red block?",
+                options: [2, 1, 3, 4],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: -200,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                ],
+                type: "basic",
+                answer: 1,
+                showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
+                  "Forces up the incline: ",
+                  "Forces down the incline: ",
+                ],
+                showfcheading: ["Red block"],
+              },
+              {
+                question:
+                  ". What is the direction of normal reaction on block 1 due to B?",
+                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 1,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                ],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                ],
+                type: "basic",
+                answer: 0,
+                showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
+                  "Forces up the incline: ",
+                  "Forces down the incline: ",
+                ],
+                showfcheading: ["Red block"],
+              },
+              {
+                question:
                   "At how many points does the imaginary sphere for red block cuts the strings",
                 options: [0, 1, 2, 3],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: -100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                 ],
                 type: "basic",
                 showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
                   "Forces up the incline: ",
                   "Forces down the incline: ",
                 ],
@@ -50860,13 +52348,15 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                 ],
                 type: "basic",
                 showfc: [
+                  "Upward Perpendicular Forces: ",
+                  "Downward Perpendicular Forces: ",
                   "Forces up the incline: ",
                   "Forces down the incline: ",
                 ],
@@ -50886,16 +52376,47 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                 ],
                 showfc: [
+                  "Upward Perpendicular Forces: N1, ",
+                  "Downward Perpendicular Forces: 30cos(45\u00b0)",
                   "Forces up the incline: T\u2081, ",
                   "Forces down the incline: 30sin(45\u00b0)",
                 ],
                 showfcheading: ["Red block"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                ],
+                type: "basic",
+              },
+              {
+                question:
+                  "Whats the FBD equation of red block perpendicular to the incline?",
+                options: [
+                  "+N\u2081-30cos(45\u00b0)=0",
+                  "-N\u2081-30cos(45\u00b0)=0",
+                ],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 100,
+                show1: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                ],
+                showfc: [
+                  "Upward Perpendicular Forces: N1, ",
+                  "Downward Perpendicular Forces: 30cos(45\u00b0)",
+                  "Forces up the incline: T\u2081, ",
+                  "Forces down the incline: 30sin(45\u00b0)",
+                ],
+                showfcheading: ["Red block"],
+                show2: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
+                  "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 type: "basic",
               },
@@ -50907,12 +52428,14 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: -100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 type: "basic",
                 showfc: [
@@ -50933,12 +52456,14 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 type: "basic",
                 showfc: [
@@ -50963,8 +52488,9 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                 ],
                 showfc: [
                   "Upward Forces: T\u2082, ",
@@ -50974,8 +52500,9 @@ export const questionData = [
                 ],
                 showfcheading: ["Yellow block"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 type: "basic",
@@ -50988,13 +52515,15 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: -100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 type: "basic",
@@ -51016,13 +52545,15 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 type: "basic",
@@ -51043,13 +52574,15 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 type: "basic",
@@ -51070,13 +52603,15 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 3,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 type: "basic",
@@ -51097,8 +52632,9 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 100,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                 ],
                 showfc: [
@@ -51109,8 +52645,9 @@ export const questionData = [
                 ],
                 showfcheading: ["Third pulley"],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Third pulley: T\u2082-2T\u2081=0",
                 ],
@@ -51131,14 +52668,16 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: -1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
@@ -51155,14 +52694,16 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
@@ -51179,14 +52720,16 @@ export const questionData = [
                 threejssubstep: 3,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
@@ -51203,14 +52746,16 @@ export const questionData = [
                 threejssubstep: 5,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
@@ -51231,14 +52776,16 @@ export const questionData = [
                 threejssubstep: 1,
                 threejssubsubstep: 300,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
@@ -51261,15 +52808,17 @@ export const questionData = [
                 threejssubstep: 4,
                 threejssubsubstep: 1,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
@@ -51287,15 +52836,17 @@ export const questionData = [
                 threejssubstep: 4,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
@@ -51317,15 +52868,17 @@ export const questionData = [
                 threejssubstep: 2,
                 threejssubsubstep: 300,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
                 ],
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
@@ -51345,18 +52898,19 @@ export const questionData = [
                 question:
                   "What are the final accelerations, tensions and normal reactions?",
                 options: [
-                  "a\u2081= 1.97, a\u2082= -0.99, a\u2083= -0.99, T\u2081= 27.03, T\u2082= 54.05",
-                  "a\u2081= 162.18, a\u2082= 540.5, a\u2083= -2.97, T\u2081= -5.94, T\u2082= 9.85",
-                  "a\u2081= 17.73, a\u2082= 540.5, a\u2083= 105.65, T\u2081= -7.92, T\u2082= -6.93",
-                  "a\u2081= 63.39, a\u2082= 19.7, a\u2083= -1.98, T\u2081= 270.3, T\u2082= 378.35",
+                  "a\u2081= 1.97, a\u2082= -0.99, a\u2083= -0.99, T\u2081= 27.03, T\u2082= 54.05, N\u2081= 21.13",
+                  "a\u2081= 162.18, a\u2082= 540.5, a\u2083= -2.97, T\u2081= -5.94, T\u2082= 9.85, N\u2081= 105.65",
+                  "a\u2081= 17.73, a\u2082= 540.5, a\u2083= 105.65, T\u2081= -7.92, T\u2082= -6.93, N\u2081= 108.12",
+                  "a\u2081= 63.39, a\u2082= 19.7, a\u2083= -1.98, T\u2081= 270.3, T\u2082= 378.35, N\u2081= -9.9",
                 ],
                 answer: 0,
                 threejsstep: "finalanswer",
                 threejssubstep: 0,
                 threejssubsubstep: 2,
                 show1: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
@@ -51366,13 +52920,14 @@ export const questionData = [
                 showfcheading: [],
                 tobeshown: 1,
                 show2: [
-                  "Unknowns: a\u2081(red), a\u2082(yellow), a\u2083(pulley), T\u2081, T\u2082",
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                   "Red block: +T\u2081-30sin(45\u00b0)=3a\u2081",
+                  "Red block: +N\u2081-30cos(45\u00b0)=0",
                   "Yellow block: +60-T\u2082=6a\u2082",
                   "Second pulley: -2T\u2081+T\u2082=0",
                   "Pink string: -a\u2081+2a\u2083=0",
                   "Red string: +a\u2082-a\u2083=0",
-                  "Final Answers: a\u2081= 1.97, a\u2082= -0.99, a\u2083= -0.99, T\u2081= 27.03, T\u2082= 54.05",
+                  "Final Answers: a\u2081= 1.97, a\u2082= -0.99, a\u2083= -0.99, T\u2081= 27.03, T\u2082= 54.05, N\u2081= 21.13",
                 ],
               },
             ],
@@ -51464,7 +53019,7 @@ export const questionData = [
                           "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "type": "basic",
                       "showfc": [],
@@ -51488,10 +53043,10 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": -200,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "type": "basic",
                       "answer": 2,
@@ -51515,10 +53070,10 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": 1,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "type": "basic",
                       "answer": 0,
@@ -51544,10 +53099,10 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": -100,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "type": "basic",
                       "showfc": [
@@ -51572,10 +53127,10 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": 2,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "type": "basic",
                       "showfc": [
@@ -51601,7 +53156,7 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": 100,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081"
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, "
                       ],
                       "showfc": [
                           "Upward Perpendicular Forces: N1, ",
@@ -51613,7 +53168,7 @@ export const questionData = [
                           "Red block"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081"
                       ],
                       "type": "basic"
@@ -51629,7 +53184,7 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": 100,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081"
                       ],
                       "showfc": [
@@ -51642,7 +53197,7 @@ export const questionData = [
                           "Red block"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0"
                       ],
@@ -51660,12 +53215,12 @@ export const questionData = [
                       "threejssubstep": 2,
                       "threejssubsubstep": -100,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0"
                       ],
@@ -51692,12 +53247,12 @@ export const questionData = [
                       "threejssubstep": 2,
                       "threejssubsubstep": 1,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0"
                       ],
@@ -51725,7 +53280,7 @@ export const questionData = [
                       "threejssubstep": 2,
                       "threejssubsubstep": 100,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0"
                       ],
@@ -51739,7 +53294,7 @@ export const questionData = [
                           "Yellow block"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
@@ -51758,13 +53313,13 @@ export const questionData = [
                       "threejssubstep": 4,
                       "threejssubsubstep": -100,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
@@ -51792,13 +53347,13 @@ export const questionData = [
                       "threejssubstep": 4,
                       "threejssubsubstep": 1,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
@@ -51825,13 +53380,13 @@ export const questionData = [
                       "threejssubstep": 4,
                       "threejssubsubstep": 2,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
@@ -51858,13 +53413,13 @@ export const questionData = [
                       "threejssubstep": 4,
                       "threejssubsubstep": 3,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
@@ -51891,7 +53446,7 @@ export const questionData = [
                       "threejssubstep": 4,
                       "threejssubsubstep": 100,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082"
@@ -51906,7 +53461,7 @@ export const questionData = [
                           "Second pulley"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -51933,14 +53488,14 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": -1,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
                           "Second pulley: +2T\u2081-T\u2082=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -51963,14 +53518,14 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": 1,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
                           "Second pulley: +2T\u2081-T\u2082=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -51995,14 +53550,14 @@ export const questionData = [
                       "threejssubstep": 2,
                       "threejssubsubstep": 2,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
                           "Second pulley: +2T\u2081-T\u2082=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52029,14 +53584,14 @@ export const questionData = [
                       "threejssubstep": 1,
                       "threejssubsubstep": 300,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
                           "Second pulley: +2T\u2081-T\u2082=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52064,7 +53619,7 @@ export const questionData = [
                       "threejssubstep": 3,
                       "threejssubsubstep": 1,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52072,7 +53627,7 @@ export const questionData = [
                           "Pink string: +a\u2081-2a\u2083=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52098,7 +53653,7 @@ export const questionData = [
                       "threejssubstep": 3,
                       "threejssubsubstep": 2,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52106,7 +53661,7 @@ export const questionData = [
                           "Pink string: +a\u2081-2a\u2083=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52134,7 +53689,7 @@ export const questionData = [
                       "threejssubstep": 2,
                       "threejssubsubstep": 300,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52142,7 +53697,7 @@ export const questionData = [
                           "Pink string: +a\u2081-2a\u2083=0"
                       ],
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52178,7 +53733,7 @@ export const questionData = [
                       "threejssubstep": 0,
                       "threejssubsubstep": 2,
                       "show1": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -52190,7 +53745,7 @@ export const questionData = [
                       "showfcheading": [],
                       "tobeshown": 1,
                       "show2": [
-                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081",
+                          "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, N\u2081, ",
                           "Red block: +30sin(45\u00b0)-T\u2081=3a\u2081",
                           "Red block: +N\u2081-30cos(45\u00b0)=0",
                           "Yellow block: +T\u2082-40=4a\u2082",
@@ -65431,7 +66986,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -65576,7 +67131,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -65779,7 +67334,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -65924,7 +67479,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -66128,7 +67683,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -66148,7 +67703,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -66332,7 +67887,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -66352,7 +67907,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -66541,7 +68096,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -66561,7 +68116,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -66644,7 +68199,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -66802,7 +68357,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -66822,7 +68377,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -66975,7 +68530,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -67150,7 +68705,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -67170,7 +68725,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -67253,7 +68808,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -67411,7 +68966,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -67431,7 +68986,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -67760,7 +69315,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -67780,7 +69335,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -67872,7 +69427,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -68170,7 +69725,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -68368,7 +69923,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -68538,7 +70093,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -68833,7 +70388,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -69015,7 +70570,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -69899,7 +71454,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -70396,7 +71951,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -70880,7 +72435,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -71634,7 +73189,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -71806,7 +73361,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -72364,7 +73919,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -72596,7 +74151,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 3 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 3,
                 threejssubsubstep: 1,
@@ -73643,7 +75198,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -74616,7 +76171,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -74796,7 +76351,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -75679,7 +77234,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -75855,7 +77410,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -76321,7 +77876,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -76513,7 +78068,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -77773,7 +79328,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -77953,7 +79508,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -78846,7 +80401,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -79036,7 +80591,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -80030,7 +81585,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b3?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -80174,7 +81729,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 3 due to b2?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 3,
                 threejssubsubstep: 1,
@@ -80202,7 +81757,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 3 due to c1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 3,
                 threejssubsubstep: 2,
@@ -80534,7 +82089,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -80680,7 +82235,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -80938,7 +82493,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -81082,7 +82637,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -81339,7 +82894,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -81359,7 +82914,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -81483,7 +83038,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -81740,7 +83295,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -81760,7 +83315,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -81884,7 +83439,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -82141,7 +83696,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -82161,7 +83716,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -82285,7 +83840,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 rightwards", "N2 leftwards"],
+                options: ["N\u2082 rightwards", "N\u2082 leftwards"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -82805,7 +84360,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c1?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -82969,7 +84524,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -83486,7 +85041,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -83865,7 +85420,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -84114,7 +85669,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -84660,7 +86215,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -85191,7 +86746,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -85211,7 +86766,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -85371,7 +86926,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -85691,7 +87246,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -85872,7 +87427,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -86195,7 +87750,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -86378,7 +87933,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to B?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -86857,7 +88412,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -87403,7 +88958,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -87423,7 +88978,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -87587,7 +89142,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -88249,7 +89804,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -88269,7 +89824,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -88435,7 +89990,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -89047,7 +90602,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -89067,7 +90622,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to b2?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 2,
@@ -89233,7 +90788,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to b1?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,
@@ -90585,7 +92140,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -91503,7 +93058,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to B?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -92029,7 +93584,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 1 due to c2?",
-                options: ["N1 perpendicular up", "N1 perpendicular down"],
+                options: ["N\u2081 perpendicular up", "N\u2081 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 1,
                 threejssubsubstep: 1,
@@ -92209,7 +93764,7 @@ export const questionData = [
               {
                 question:
                   "What is the direction of normal reaction on block 2 due to c3?",
-                options: ["N2 perpendicular up", "N2 perpendicular down"],
+                options: ["N\u2082 perpendicular up", "N\u2082 perpendicular down"],
                 threejsstep: "fbd",
                 threejssubstep: 2,
                 threejssubsubstep: 1,

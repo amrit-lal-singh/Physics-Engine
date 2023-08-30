@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import React from "react";
+import { Link } from "react-router-dom";
 import { propTypes } from "react-latex";
 import * as THREE from "three";
 import typefaceFont from './fonts/optimer_bold.typeface.json'
@@ -56,11 +57,11 @@ import steptwo4 from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (30).m4
 import steptwo5 from './AUDIOS/rekindlyfindthecodeattached/Recording (11).m4a'
 import steptwo6 from './AUDIOS/rekindlyfindthecodeattached/Recording (13).m4a'
 import mtv from './AUDIOS/rekindlyfindthecodeattached/Recording (14).m4a'
-import steptwo8 from './AUDIOS/rekindlyfindthecodeattached/force and acc resolve.m4a'
+import steptwo8 from './AUDIOS/rekindlyfindthecodeattached/Recording (15).m4a'
 import constr from './AUDIOS/rekindlyfindthecodeattached/Recording (19).m4a'
 import constr1 from './AUDIOS/rekindlyfindthecodeattached/Recording (21).m4a'
 
-import stepwedge from './AUDIOS/rekindlyfindthecodeattached (1)/wedge waali recording.m4a'
+import stepwedge from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (22).m4a'
 import stepwedge1 from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (25).m4a'
 
 import steptwo3 from './AUDIOS/rekindlyfindthecodeattached/Recording (6).m4a'
@@ -137,14 +138,11 @@ import finalstepaudio from './AUDIOS/step4new/finalstepaudio.mp3'
 import lateeqnkya from './AUDIOS/advance/lateeqnkya.mp3'
 import Back from "./Back";
 import {Howl, Howler} from 'howler';
-import { Link, useNavigate  } from "react-router-dom";
-
 const TestThree = (props) => {
    
     const mountRef = useRef(null);
-    const navigate = useNavigate();
+
     useEffect(() => {
-        try{
         const scene = new THREE.Scene()
         //******************************************SHIVAM CODE STARTS */      
         const loader = new THREE.FontLoader();
@@ -489,7 +487,6 @@ const TestThree = (props) => {
             }
           });
         
-         
         if (step == "motion" && substep == 0  && subsubstep == (-1)) {
             let pyplayer = document.getElementById('radio');
  
@@ -942,16 +939,11 @@ const TestThree = (props) => {
       if(step == "fbd" && substep == flag && subsubstep == -100){
         
         //this is red block 
-        soundtension.pause();
-        let xy = document.getElementById('radio');
-
         gplayer.pause();
-            xy.src = steptwo5;
-                              xy.play();
+            gplayer.src = steptwo5;
+                              gplayer.play();
                               if ( iscorrect == 1) {
-                                let x = document.getElementById('radio');
-                                xy.pause();
-                                x.source=well;
+                                gplayer.pause();
                                 soundfbd.play();
                                 // sund.play("track01");
                                 // sund.on('end', function(){
@@ -969,7 +961,7 @@ const TestThree = (props) => {
             gplayer.src = steptwo4;
         }
         if(flag>1) {
-            gplayer.src = steptwo6;
+            gplayer.src = steptwo4;
         }
             
                               gplayer.play();
@@ -1037,16 +1029,12 @@ const TestThree = (props) => {
 
       if(step == "fbd" && substep == flag && subsubstep == -100){
         //this is red block 
-        let xy = document.getElementById('radio');
-
         gplayer.pause();
-        xy.src = steptwo5;
-        xy.play();
+            gplayer.src = steptwo5;
+                              gplayer.play();
                               if ( iscorrect == 1) {
-                                let x = document.getElementById('radio');
-                                xy.pause();
-                                x.source=well;
-                                x.play();
+                                gplayer.pause();
+                                soundfbd.play();
                                 // sund.play("track01");
                                 // sund.on('end', function(){
                                     // sund.play("track02");
@@ -1063,7 +1051,7 @@ const TestThree = (props) => {
             gplayer.src = steptwo4;
         }
         if(flag>1) {
-            gplayer.src = steptwo6;
+            gplayer.src = steptwo4;
         }
             
                               gplayer.play();
@@ -1162,14 +1150,11 @@ if (answerClicked > 0 && iscorrect != 1) {
         if(step == "fbd" && substep == flag && subsubstep == -100){
           //this is pulley cut 
           gplayer.pause();
-          let xy = document.getElementById('radio');
-          xy.src = steptwo5;
-          xy.play();
+              gplayer.src = steptwo5;
+                                gplayer.play();
                                 if ( iscorrect == 1) {
-                                    let x = document.getElementById('radio');
-                                    xy.pause();
-                                x.source=well;
-                                x.play();
+                                  gplayer.pause();
+                                  soundfbd.play();
                                   // ganswerdone(t);
                                 }
         }
@@ -1309,9 +1294,6 @@ if (answerClicked > 0 && iscorrect != 1) {
             var bigblockdata = alldata["bigblock dick"]
             
             var meshbb;
-            var meshbb1;
-            var meshbb2;
-            var meshbb3;
             var bb_ini_pos_x;
             var bb_ini_pos_y;
         
@@ -1357,15 +1339,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                     meshbb = new THREE.Mesh(
                         new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
                         material_bb);
-                    meshbb1 = new THREE.Mesh(
-                        new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
-                        material_bb);
-                    meshbb2 = new THREE.Mesh(
-                        new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
-                        material_bb);
-                    meshbb3 = new THREE.Mesh(
-                        new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
-                        material_bb);
+           
                     var blocloc_x = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/15
                     var blocloc_y = (blockdata[bigblockdata.block[1][0]].loc[1] - 150)/15
 
@@ -1373,15 +1347,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                     
                     meshbb.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
                     meshbb.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
-                        
-                    meshbb1.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
-                    meshbb1.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
-
-                    meshbb2.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
-                    meshbb2.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
-
-                    meshbb3.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
-                    meshbb3.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
+                
                     camera_avg_x = camera_avg_x + meshbb.position.x
                     camera_avg_y = camera_avg_y + meshbb.position.y
                     num_of_obj = num_of_obj + 1 
@@ -1420,8 +1386,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                     const y_tr = ploc_y;
 
                     var dist = Math.pow (Math.pow((left_mid_x - ploc_x), 2) + Math.pow((left_mid_y - ploc_y), 2), 0.5)
-                    var po2x = ploc_x - 3*Math.cos(langle)*dist/1.5
-                    var po2y = ploc_y - 3*Math.sin(langle)*dist/1.5
+                    var po2x = ploc_x - 3*Math.cos(langle)*dist 
+                    var po2y = ploc_y - 3*Math.sin(langle)*dist
                     var po3y = po2y
                     var po3x = ploc_x + (ploc_y - po2y)/Math.tan(rangle)
                     
@@ -1448,10 +1414,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                     const material_tr = new THREE.MeshBasicMaterial( { color: 0x009900 } );
                     meshbb = new THREE.Mesh( TriangleGeometry, material_tr ) ;
-                    meshbb1 = new THREE.Mesh( TriangleGeometry, material_tr ) ;
-                    meshbb2 = new THREE.Mesh( TriangleGeometry, material_tr ) ;
-                    meshbb3 = new THREE.Mesh( TriangleGeometry, material_tr ) ;
-                    
+            
                     bb_ini_pos_x = 0;
                     bb_ini_pos_y = 0;
                 
@@ -1468,22 +1431,9 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                 
                 }
-                
-                if (!step.includes("constraint")){
-                    if(alld_question_no==68 && subsubstep>=3 && substep==0){
-                        meshbb1.position.y=meshbb1.position.y+5
-                        meshbb2.position.y=meshbb2.position.y+5
-                        meshbb3.position.y=meshbb3.position.y-3
-                        
-                        scene.add(meshbb1);
-                        scene.add(meshbb2);
-                        scene.add(meshbb3);
-                    }
-                    else{
-                        scene.add(meshbb);
-                    }
-                }
-                    
+        
+                if (!step.includes("constraint"))
+                    scene.add(meshbb);
                 if (step == "constraint" && (subsubstep == -1 ||subsubstep == 0))
                     scene.add(meshbb);
             }
@@ -1497,11 +1447,8 @@ if (answerClicked > 0 && iscorrect != 1) {
       // manglick code for alld que > 54 ends
 
         var meshk = new Array(n_b);
-        var temp1, temp2, temp3;
-        var pl1, pl2, eq1, eq2;
         var meshpl = new Array(n_c);
         var block_ini_pos_x = new Array(n_b);
-        var x1,x2,x3,y1,y2,y3;
         var block_ini_pos_y = new Array(n_b);
         var pulley_ini_pos_x = new Array(n_p);
         var pulley_ini_pos_y = new Array(n_p);
@@ -1536,7 +1483,6 @@ if (answerClicked > 0 && iscorrect != 1) {
         var acc_arrow_length
         var acc_arrowHelper = new Array(n_b + n_p)
         var acc_cone = new Array(n_b + n_p)
-        var box1,wedge1,box2,wedge2;
         const geometryc = new THREE.ConeGeometry(0.15, 0.25, 32); //changed from 0.1, 0.2 to 0.15, 0.25 on 20th June
         const materialc = new THREE.MeshBasicMaterial({ color: 0xffffff });
 
@@ -1551,84 +1497,27 @@ if (answerClicked > 0 && iscorrect != 1) {
             
             //const material = new THREE.MeshNormalMaterial()
             const materialx = new THREE.MeshBasicMaterial({color: clr[(i-1)%4]}) //added by mangalik
-            const materials = new THREE.MeshBasicMaterial({color: 0xffffff}) //added by mangalik
-
             //const material2 = new THREE.MeshMatcapMaterial()
             //materialx.map = texture
             //materialx.color = new THREE.Color(clr[i - 1])
-            if(i==1){
-                temp1 = new THREE.Mesh(
-                    new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
-                    materialx);
-                temp2 = new THREE.Mesh(
-                    new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
-                    materialx);
-                temp3 = new THREE.Mesh(
-                    new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
-                    materialx);
-                pl1 = new THREE.Mesh(
-                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 0.5, blockdata[i].size[0] / 15  - 1.5, blockdata[i].size[1] / 100000), //added by mangalik
-                    materials);
-                pl2 = new THREE.Mesh(
-                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 0.5, blockdata[i].size[0] / 15  - 1.5, blockdata[i].size[1] / 100000), //added by mangalik
-                    materials);
-                eq1 = new THREE.Mesh(
-                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 1.5, blockdata[i].size[0] / 15  - 0.5, blockdata[i].size[1] / 100000), //added by mangalik
-                    materials);
-                eq2 = new THREE.Mesh(
-                    new THREE.BoxGeometry(blockdata[i].size[0] / 15 - 1.5, blockdata[i].size[0] / 15  - 0.5, blockdata[i].size[1] / 100000), //added by mangalik
-                    materials);
-            }
             meshk[i - 1] = new THREE.Mesh(
                 new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
                 materialx); //where does the division by 15 come from?
             //debugger
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
                 //scene.add(meshk[i - 1])
-                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                    scene.add(meshk[i-1])
-                }
-                if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
-                    scene.add(pl1);
-                    scene.add(eq1);
-                    scene.add(pl2);
-                    scene.add(eq2);
-                    scene.add(temp1);
-                    scene.add(temp2);
-                    scene.add(temp3);
-                }
+                scene.add(meshk[i-1])
+
             }
             if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>")&& subsubstep !=300) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>") {
                     if (stringdata[substep]["first obj"] == i) {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(meshk[i-1])
-                        }
-                        if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
-                            scene.add(pl1);
-                            scene.add(eq1);
-                            scene.add(pl2);
-                            scene.add(eq2);
-                            scene.add(temp1);
-                            scene.add(temp2);
-                            scene.add(temp3);
-                        }
+                        scene.add(meshk[i - 1])
                     }
                 }
                 if (stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>") {
                     if (stringdata[substep]["second obj"] == i) {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(meshk[i-1])
-                        }
-                        if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
-                            scene.add(pl1);
-                            scene.add(eq1);
-                            scene.add(pl2);
-                            scene.add(eq2);
-                            scene.add(temp1);
-                            scene.add(temp2);
-                            scene.add(temp3);
-                        }
+                        scene.add(meshk[i - 1])
                     }
                 }
             }
@@ -1640,34 +1529,12 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["first obj"] == i) {
-                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                                    scene.add(meshk[i-1])
-                                }
-                                if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
-                                    scene.add(pl1);
-                                    scene.add(eq1);
-                                    scene.add(pl2);
-                                    scene.add(eq2);
-                                    scene.add(temp1);
-                                    scene.add(temp2);
-                                    scene.add(temp3);
-                                }
+                                scene.add(meshk[i - 1])
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["second obj"] == i) {
-                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                                    scene.add(meshk[i-1])
-                                }
-                                if(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3 && i==1){
-                                    scene.add(pl1);
-                                    scene.add(eq1);
-                                    scene.add(pl2);
-                                    scene.add(eq2);
-                                    scene.add(temp1);
-                                    scene.add(temp2);
-                                    scene.add(temp3);
-                                }
+                                scene.add(meshk[i - 1])
                             }
                         }
                     }
@@ -1675,32 +1542,6 @@ if (answerClicked > 0 && iscorrect != 1) {
             }
             // 22June change code ends manglik
             //changed from /20 to /15 on 20th June
-            if(i==1){
-                temp1.position.x = 8+(blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
-                temp1.position.y = 5.72+(blockdata[i].loc[1] - 150) / 15;
-                temp1.rotation.z = block_angle[i - 1]
-
-                temp2.position.x = 0.7+(blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
-                temp2.position.y = 5.72+(blockdata[i].loc[1] - 150) / 15;
-                temp2.rotation.z = block_angle[i - 1]
-
-                temp3.position.x = 4.5+(blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
-                temp3.position.y = -2.28+(blockdata[i].loc[1] - 150) / 15;
-                temp3.rotation.z = block_angle[i - 1]
-
-                pl1.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15;
-                pl1.position.y = 4.72+(blockdata[i].loc[1] - 150) / 15;
-                pl2.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15;
-                pl2.position.y = 4.72+(blockdata[i].loc[1] - 150) / 15;
-                pl2.rotation.z = block_angle[i - 1]*2;
-                eq1.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15+0.25;
-                eq2.position.x = 6.5+(blockdata[i].loc[0] - 150) / 15-0.25;
-                eq2.position.y +=2.5;
-                eq1.position.y +=2.5;
-                // eq2.rotation.z = block_angle[i - 1]*2
-                // eq1.rotation.z = block_angle[i - 1]*2
-            }
-            
             meshk[i - 1].position.x = (blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
             meshk[i - 1].position.y = (blockdata[i].loc[1] - 150) / 15;
             meshk[i - 1].rotation.z = block_angle[i - 1]
@@ -1709,12 +1550,6 @@ if (answerClicked > 0 && iscorrect != 1) {
             camera_avg_y = camera_avg_y + meshk[i - 1].position.y //added by mangalik
             num_of_obj = num_of_obj + 1 //added by mangalik
             //meshk[i - 1].position.z = -0.5
-            x1=temp1.position.x;
-            x2=temp2.position.x;
-            x3=temp3.position.x;
-            y1=temp1.position.y;
-            y2=temp2.position.y;
-            y3=temp3.position.y;
             block_ini_pos_x[i - 1] = meshk[i - 1].position.x;
             block_ini_pos_y[i - 1] = meshk[i - 1].position.y;
             text_loc_x[i - 1] = meshk[i - 1].position.x + 0.8 * blockdata[i].textloc
@@ -1807,58 +1642,26 @@ if (answerClicked > 0 && iscorrect != 1) {
             //mangalik code ends
 
             var arr_points = []
-            var boxl1 = []
 
             arr_points.push(acc_arrow_from)
             arr_points.push(acc_arrow_to)
-            
-            // if(i==1 && alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3){
-            //     boxl1.push(new THREE.Vector3(temp3.position.x - l*Math.sin(arr_ang) - lr2*Math.cos(3*Math.PI/4 - arr_ang) - 0.8, temp3.position.y + l*(Math.cos(arr_ang)) +lr2*(Math.sin(3*Math.PI/4 - arr_ang)) -0.5, 0))
-            //     boxl1.push(new THREE.Vector3(boxl1[0].x - arr_len*Math.cos(arr_ang)-0.8, boxl1[0].y - arr_len*Math.sin(arr_ang)-0.5))
-            //     const acc_geometry1 = new THREE.BufferGeometry().setFromPoints(boxl1)
-            //     var acc_mat1 = new THREE.MeshBasicMaterial({ color: clr[(i-1)%4] })
-    
-            //     var acc_line1 = new THREE.Line(acc_geometry1, acc_mat1);
-            //     scene.add(acc_line1);
-
-            //     box1 = new THREE.Mesh(geometryc, materialx);
-            //     box2 = new THREE.Mesh(geometryc, materialx);
-            //     wedge1 = new THREE.Mesh(geometryc, materialx);
-            //     wedge2 = new THREE.Mesh(geometryc, materialx);
-
-            //     box1.position.x=acc_arrow_to.x+temp3.position.x-meshk[i-1].position.x-0.8;
-            //     box1.position.y=acc_arrow_to.y+temp3.position.y-meshk[i-1].position.y-0.5;
-
-            //     box1.rotation.z=Math.PI/4;
-            //     box2.rotation.z=block_angle[i - 1]-Math.PI/2;
-            //     scene.add(box1);
-            // }
-            // boxl1.push(new THREE.Vector3(meshk[0].position.x + l*Math.cos(arr_ang) + lr2*Math.cos(Math.PI/4 + arr_ang), meshk[i - 1].position.y + l*(Math.sin(arr_ang)) + lr2*Math.sin(Math.PI/4 + arr_ang) , 0))
-            // boxl1.push(new THREE.Vector3(temp2.position.x-1.6,temp2.position.y,0))
-
-           
-            
-            //acc_arrow_direction = acc_arrow_to.clone().sub(acc_arrow_from);
-            //acc_arrow_length = acc_arrow_direction.length();
-            //acc_arrowHelper[i - 1] = new THREE.ArrowHelper(acc_arrow_direction.normalize(), acc_arrow_from, acc_arrow_length, clr[i - 1]); //colour added by mangalik
-            acc_cone[i - 1] = new THREE.Mesh(geometryc, materialx);
-            box1 = new THREE.Mesh(geometryc, materialx);
-            box2 = new THREE.Mesh(geometryc, materialx);
-            wedge1 = new THREE.Mesh(geometryc, materialx);
-            wedge2 = new THREE.Mesh(geometryc, materialx);
-
-            box1.position.x=temp2.position.x-0.6;
-            box1.position.y=temp2.position.y+1.1;
-            // scene.add(box1);
-            //acc_cone[i - 1].position.x = meshk[i - 1].position.x + (blockdata[i].size[0]/15)*blockdata[i].textloc[0] + (blockdata[i].size[0]/15)*0.5 * blockdata[i].arrdir[0];
-            //acc_cone[i - 1].position.y = meshk[i - 1].position.y + (blockdata[i].size[0]/15)*blockdata[i].textloc[1] + 0.5 * (blockdata[i].size[0]/15)*blockdata[i].arrdir[1];
-            acc_cone[i - 1].position.x = acc_arrow_to.x //added by mangalik               //meshk[i - 1].position.x + (blockdata[i].size[0]/15)*blockdata[i].textloc[0] + (blockdata[i].size[0]/15)*0.5 * blockdata[i].arrdir[0];
-            acc_cone[i - 1].position.y = acc_arrow_to.y //added by mangalik                //meshk[i - 1].position.y + (blockdata[i].size[0]/15)*blockdata[i].textloc[1] + 0.5 * (blockdata[i].size[0]/15)*blockdata[i].arrdir[1];
 
             const acc_geometry = new THREE.BufferGeometry().setFromPoints(arr_points)
             var acc_mat = new THREE.MeshBasicMaterial({ color: clr[(i-1)%4] })
 
             var acc_line = new THREE.Line(acc_geometry, acc_mat);
+            //acc_arrow_direction = acc_arrow_to.clone().sub(acc_arrow_from);
+            //acc_arrow_length = acc_arrow_direction.length();
+            //acc_arrowHelper[i - 1] = new THREE.ArrowHelper(acc_arrow_direction.normalize(), acc_arrow_from, acc_arrow_length, clr[i - 1]); //colour added by mangalik
+            acc_cone[i - 1] = new THREE.Mesh(geometryc, materialx);
+
+
+            //acc_cone[i - 1].position.x = meshk[i - 1].position.x + (blockdata[i].size[0]/15)*blockdata[i].textloc[0] + (blockdata[i].size[0]/15)*0.5 * blockdata[i].arrdir[0];
+            //acc_cone[i - 1].position.y = meshk[i - 1].position.y + (blockdata[i].size[0]/15)*blockdata[i].textloc[1] + 0.5 * (blockdata[i].size[0]/15)*blockdata[i].arrdir[1];
+            acc_cone[i - 1].position.x = acc_arrow_to.x //added by mangalik               //meshk[i - 1].position.x + (blockdata[i].size[0]/15)*blockdata[i].textloc[0] + (blockdata[i].size[0]/15)*0.5 * blockdata[i].arrdir[0];
+            acc_cone[i - 1].position.y = acc_arrow_to.y //added by mangalik                //meshk[i - 1].position.y + (blockdata[i].size[0]/15)*blockdata[i].textloc[1] + 0.5 * (blockdata[i].size[0]/15)*blockdata[i].arrdir[1];
+
+
             //mangalik code starts
 
             // fixing the position of the arrowhead, also the direction it faces
@@ -1892,23 +1695,10 @@ if (answerClicked > 0 && iscorrect != 1) {
             else if (xacc > 0 && yacc < 0) {
                 acc_cone[i - 1].rotation.z = block_angle[i - 1] - Math.PI/2
             }
-
-            box1.rotation.z=Math.PI/4;
-            box2.rotation.z=block_angle[i - 1]-Math.PI/2;
-
-            wedge1.rotation.z=Math.PI/2;
-            wedge2.rotation.z=Math.PI/2;
-
-            // scene.add(box1);
-            // if(alld_question_no==68 && step=="motion" && substep==0 && substepstep>=3){
-            //     acc_cone[i - 1]
-            // }
             if ((blockdata[i].acceleration[0] != 0) || (blockdata[i].acceleration[1] != 0)) {
                 if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")){
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(acc_line)
-                        scene.add(acc_cone[i - 1])
-                    }
+                    scene.add(acc_line)
+                    scene.add(acc_cone[i - 1])
                 }
             }
 
@@ -2099,10 +1889,9 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                     //14th June Starts
                     if (step == "motion") {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(force_line_y[i - 1])
-                            scene.add(force_cone_y[i - 1])
-                        }
+                        
+                        scene.add(force_line_y[i - 1])
+                        scene.add(force_cone_y[i - 1])
                     }
                     //14th June ends
                     
@@ -2163,10 +1952,8 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                     //14th June Starts
                     if (step == "motion") {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(force_line_x[i - 1])
-                            scene.add(force_cone_x[i - 1])
-                        }
+                        scene.add(force_line_x[i - 1])
+                        scene.add(force_cone_x[i - 1])
                     }
                     //14th June ends
                 }
@@ -2232,10 +2019,9 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                     //14th June Starts
                     if (step == "motion") {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(force_line_y[i - 1])
-                            scene.add(force_cone_y[i - 1])
-                        }
+                        
+                        scene.add(force_line_y[i - 1])
+                        scene.add(force_cone_y[i - 1])
                     }
                     //14th June ends   
                 }
@@ -2298,10 +2084,8 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                     //14th June Starts
                     if (step == "motion") {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(force_line_x[i - 1])
-                            scene.add(force_cone_x[i - 1])
-                        }
+                        scene.add(force_line_x[i - 1])
+                        scene.add(force_cone_x[i - 1])
                     }
                     //14th June ends
                 }
@@ -2357,23 +2141,17 @@ if (answerClicked > 0 && iscorrect != 1) {
             
 
             if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
-                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                    scene.add(meshpl[x-1])
-                }
+                scene.add(meshpl[x - 1])
             }
             if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.grounds'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.grounds'>") && subsubstep !=300 ) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.grounds'>") {
                     if (stringdata[substep]["first obj"] == x) {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(meshpl[x-1])
-                        }
+                        scene.add(meshpl[x - 1])
                     }
                 }
                 if (stringdata[substep]["second obj type"] == "<class 'blocksclass.grounds'>") {
                     if (stringdata[substep]["second obj"] == x) {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(meshpl[x-1])
-                        }
+                        scene.add(meshpl[x - 1])
                     }
                 }
             }
@@ -2387,16 +2165,12 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.grounds'>") {
                             if (stringdata[sc]["first obj"] == x) {
-                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                                    scene.add(meshpl[x-1])
-                                }
+                                scene.add(meshpl[x - 1])
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.grounds'>") {
                             if (stringdata[sc]["second obj"] == x) {
-                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                                    scene.add(meshpl[x-1])
-                                }
+                                scene.add(meshpl[x - 1])
                             }
                         }
                     }
@@ -2489,25 +2263,19 @@ if (answerClicked > 0 && iscorrect != 1) {
             )
             //debugger
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
-                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                    scene.add(meshp[i-1])
-                }
+                scene.add(meshp[i - 1])
             }
             if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>")&& subsubstep !=300) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>") {
                     if (stringdata[substep]["first obj"] == i) {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(meshp[i-1])
-                        }
+                        scene.add(meshp[i - 1])
                     }
 
 
                 }
                 if (stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>") {
                     if (stringdata[substep]["second obj"] == i) {
-                        if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                            scene.add(meshp[i-1])
-                        }
+                        scene.add(meshp[i - 1])
                     }
 
 
@@ -2521,16 +2289,12 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.pulleys'>") {
                             if (stringdata[sc]["first obj"] == i) {
-                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                                    scene.add(meshp[i-1])
-                                }
+                                scene.add(meshp[i - 1])
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.pulleys'>") {
                             if (stringdata[sc]["second obj"] == i) {
-                                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                                    scene.add(meshp[i-1])
-                                }
+                                scene.add(meshp[i - 1])
                             }
                         }
                     }
@@ -2667,10 +2431,8 @@ if (answerClicked > 0 && iscorrect != 1) {
 
          if (pulleydata[i].acceleration[1] != 0 || pulleydata[i].acceleration[0] != 0) {
              if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
-                if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                    scene.add(acc_cone[i + n_b - 1])
+                 scene.add(acc_cone[i + n_b - 1])
                  scene.add(acc_arrowHelper[i + n_b - 1])
-                }
              }
          }
          //mangalik code ends
@@ -3008,19 +2770,13 @@ if (answerClicked > 0 && iscorrect != 1) {
                 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
             }
 
@@ -3072,22 +2828,16 @@ if (answerClicked > 0 && iscorrect != 1) {
                 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 // if (step == "constraint" && i == substep) {
                 //     scene.add(linestr[i - 1])
                 // }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
             }
 
@@ -3146,9 +2896,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3217,9 +2965,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3293,9 +3039,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 //scene.add(linestr[i-1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3342,9 +3086,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3449,9 +3191,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
-                    if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
-                        scene.add(linestr[i - 1])
-                    }
+                    scene.add(linestr[i - 1])
                 }
                 if (step == "constraint" && i == substep && subsubstep !=300) {
                     scene.add(linestr[i - 1])
@@ -3870,385 +3610,6 @@ if (answerClicked > 0 && iscorrect != 1) {
         var chotasphere = []
         var mg_cone
         var mg_points
-        var mg_material = new THREE.MeshBasicMaterial({color: 'purple'})
-
-        var cs_count = 0;
-        for (i = 1; i < n_b + 1; i++) {
-            //debugger
-            //console.log(blockdata[i])
-            mg_cone = new THREE.Mesh(geometryc, materialx)
-
-            var mg_length_1 = blockdata[i].size[0]/13 // length of mg
-            //var mg_cone_shift = 0.11601* Math.pow(blockdata[i].size[0], 0.46)/ Math.pow(15, 0.46)
-            //camera_shift = 0//-(meshk[i - 1].position.x - 1.5) *0.11
-            var camera_shift_y = 0//-(meshk[i - 1].position.y - 1.5)*0.5
-
-            var mg_shift_checker = 0
-
-            for (j = 0; j < ip_x[i - 1].length; j++) {
-
-                if (block_angle[i - 1] == 0) {
-                    if (-ip_y[i - 1][j] + meshk[i - 1].position.y > 0.1)
-                        mg_shift_checker = 1;
-                }
-                //const elapsedTime2 = clock2.getElapsedTime()
-                console.log("angle", block_angle[i - 1])
-                //console.log("time", elapsedTime2 )
-                const materialch = new THREE.MeshBasicMaterial()
-                materialch.color = new THREE.Color(0xffffff)
-                //materialfbd.transparent = true
-                //materialfbd.opacity = 0.8
-                chotasphere[cs_count] = new THREE.Mesh(
-                    new THREE.SphereGeometry(0.1, 16, 16),
-                    materialch
-                )
-
-                chotasphere[cs_count].position.x = ip_x[i - 1][j];
-                chotasphere[cs_count].position.y = ip_y[i - 1][j];
-
-                arrow_direction = arrow_to[i - 1][j].clone().sub(arrow_from[i - 1][j]);
-                arrow_length = arrow_direction.length();
-                arrowHelper[cs_count] = new THREE.ArrowHelper(arrow_direction.normalize(), arrow_from[i - 1][j], arrow_length, 0xffffff);
-                cone[cs_count] = new THREE.Mesh(geometryc, materialc);
-
-
-                cone[cs_count].position.x = arrow_to[i - 1][j].x; //changed from ip to arrow_to
-                cone[cs_count].position.y = arrow_to[i - 1][j].y;//ip_y[i-1][j] + 0.5;
-
-                //added conditions for x-direction
-                if (block_angle[i - 1] == 0) {
-                    if (-arrow_to[i - 1][j].y + arrow_from[i - 1][j].y > 0.1) {
-                        cone[cs_count].rotation.z = Math.PI
-                    }
-                    else if (-arrow_to[i - 1][j].x + arrow_from[i - 1][j].x > 0.1) {
-                        cone[cs_count].rotation.z = Math.PI/2
-                    }
-                    else if (arrow_to[i - 1][j].x - arrow_from[i - 1][j].x > 0.1) {
-                        cone[cs_count].rotation.z = -Math.PI/2
-                    }
-                }
-                else {
-                    cone[cs_count].rotation.z = block_angle[i - 1] - Math.PI/2
-                }
-
-                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
-                    scene.add(chotasphere[cs_count]);
-                    if (alld_question_no>60 && subsubstep != -100) {
-                        //audio = new Audio(fbdi_audio[i - 1])
-                        // audio.play();
-                        let player = document.getElementById('radio');
-                        player.pause()
-                        player.src = fbdintersection_bq;
-                        // player.play()
-
-                    }
-                    if (alld_question_no>60 && subsubstep == -100) {
-                        //audio = new Audio(fbdi_audio[i - 1])
-                        // audio.play();
-                        let player = document.getElementById('radio');
-                        player.pause()
-                        player.src = steptwo5;
-                        player.play()
-                        if (answerClicked > 0 && iscorrect == 1) {
-
-                            let player = document.getElementById('radio');
-                            player.pause()
-                            player.src = fbdi_audio_after[i - 1];
-                            // player.play()
-                        }
-                    }
-
-                }
-                
-                if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
-                    scene.add(chotasphere[cs_count]);
-                    scene.add(arrowHelper[cs_count]);
-                    scene.add(cone[cs_count]);
-                    if (subsubstep == 100) {
-                        //audio = new Audio(fbdf_audio[i - 1])
-                        //  audio.play();
-                        let player = document.getElementById('radio');
-                        player.pause()
-                        player.src = fbdf_audio[i - 1];
-                        // player.play()
-                    }
-                }
-
-
-
-                cs_count = cs_count + 1;
-
-
-
-
-            }
-
-            mg_points = []
-
-            var mg_from = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y, 0.00073);
-            var mg_to = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y - mg_length_1, 0.00073);
-            // // Initial position of mg_to
-            // var initialMgTo = new THREE.Vector3(meshk[i - 1].position.x - 0.5 * mg_length_1, meshk[i - 1].position.y - 0.5 * mg_length_1, 0.00073);
-
-            // // Linearly interpolate mg_to based on elapsedTime2
-            // var mg_to = initialMgTo.clone(); // Start with initial position
-            // const elapsedTime2 = clock2.getElapsedTime()
-            // function updateMgTo(elapsedTime2) {
-            //     // Calculate the interpolation factor based on elapsedTime2
-            //     var interpolationFactor = elapsedTime2 / 0.003; // Adjust totalTime as needed
-
-            //     // Calculate the new position of mg_to based on linear interpolation
-            //     mg_to.x = initialMgTo.x + interpolationFactor * (meshk[i - 1].position.x - initialMgTo.x);
-            //     mg_to.y = initialMgTo.y + interpolationFactor * (meshk[i - 1].position.y - initialMgTo.y);
-
-            //     // ... rest of your code ...
-
-            //     // Call the function recursively or as needed
-            //     // requestAnimationFrame(updateMgTo);
-            // }
-
-            // // Start the interpolation loop
-            // updateMgTo(elapsedTime2);
-
-            if (mg_shift_checker == 1) {
-                mg_to.x = mg_to.x + 1/6;
-                mg_from.x = mg_to.x;
-            }
-
-            mg_points.push(mg_from)
-            mg_points.push(mg_to)
-
-            const mg_geometry = new THREE.BufferGeometry().setFromPoints(mg_points);
-
-            //var mg_direction = mg_to.clone().sub(mg_from);
-            //var mg_length = mg_direction.length();
-            //var mg_arrow_direction = arrow_to[meshk[i - 1].position.x][meshk[i - 1].position.y - 1].clone().sub(arrow_from[meshk[i - 1].position.x][meshk[i - 1].position.y]);
-            //var mg_arrow_length = mg_direction.length();
-            //var mg_arrowHelper = new THREE.ArrowHelper(mg_direction.normalize(), mg_from, mg_length, 0xffffff);//0x0A9EFF
-
-            var mg_line = new THREE.Line(mg_geometry, mg_material);
-
-            mg_cone.position.x = mg_to.x; //changed from meshk[i - 1].position.x;
-            mg_cone.position.y = mg_to.y //+ mg_cone_shift; //changed from meshk[i - 1].position.y - 1.43;
-            mg_cone.position.z = 0
-            // if (arrow_to[i - 1][j].y < arrow_from[i - 1][j].y) {
-            mg_cone.rotation.z = Math.PI
-            //}
-
-            //adding code for mg chotasphere on 30 June
-
-            const material_mg_chotasphere = new THREE.MeshBasicMaterial()
-            material_mg_chotasphere.color = new THREE.Color(0xffffff)
-            //materialfbd.transparent = true
-            //materialfbd.opacity = 0.8
-            var mg_chotasphere = new THREE.Mesh(
-                new THREE.SphereGeometry(0.1, 16, 16),
-                material_mg_chotasphere
-            )
-
-            mg_chotasphere.position.x = mg_from.x;
-            mg_chotasphere.position.y = mg_from.y;
-
-            if (step == "fbd" && substep == i && subsubstep == -300)
-                scene.add(mg_chotasphere)
-
-            // code for mg chotasphere ends
-
-            if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
-                scene.add(mg_line)
-                scene.add(mg_cone)
-            }
-
-        }
-
-
-
-
-
-        //debugger
-        var chotasphere = []
-        var mg_cone
-        var mg_points
-        var mg_material = new THREE.MeshBasicMaterial({color: 'yellow'})
-
-        var cs_count = 0;
-        for (i = 1; i < n_b + 1; i++) {
-            //debugger
-            //console.log(blockdata[i])
-            mg_cone = new THREE.Mesh(geometryc, materialx)
-
-            var mg_length_1 = blockdata[i].size[0]/13 // length of mg
-            //var mg_cone_shift = 0.11601* Math.pow(blockdata[i].size[0], 0.46)/ Math.pow(15, 0.46)
-            //camera_shift = 0//-(meshk[i - 1].position.x - 1.5) *0.11
-            var camera_shift_y = 0//-(meshk[i - 1].position.y - 1.5)*0.5
-
-            var mg_shift_checker = 0
-
-            for (j = 0; j < ip_x[i - 1].length; j++) {
-
-                if (block_angle[i - 1] == 0) {
-                    if (-ip_y[i - 1][j] + meshk[i - 1].position.y > 0.1)
-                        mg_shift_checker = 1;
-                }
-
-                const materialch = new THREE.MeshBasicMaterial()
-                materialch.color = new THREE.Color(0xffffff)
-                //materialfbd.transparent = true
-                //materialfbd.opacity = 0.8
-                chotasphere[cs_count] = new THREE.Mesh(
-                    new THREE.SphereGeometry(0.1, 16, 16),
-                    materialch
-                )
-
-                chotasphere[cs_count].position.x = ip_x[i - 1][j];
-                chotasphere[cs_count].position.y = ip_y[i - 1][j];
-
-                arrow_direction = arrow_to[i - 1][j].clone().sub(arrow_from[i - 1][j]);
-                arrow_length = arrow_direction.length();
-                arrowHelper[cs_count] = new THREE.ArrowHelper(arrow_direction.normalize(), arrow_from[i - 1][j], arrow_length, 0xffffff);
-                cone[cs_count] = new THREE.Mesh(geometryc, materialc);
-
-
-                cone[cs_count].position.x = arrow_to[i - 1][j].x; //changed from ip to arrow_to
-                cone[cs_count].position.y = arrow_to[i - 1][j].y;//ip_y[i-1][j] + 0.5;
-
-                //added conditions for x-direction
-                if (block_angle[i - 1] == 0) {
-                    if (-arrow_to[i - 1][j].y + arrow_from[i - 1][j].y > 0.1) {
-                        cone[cs_count].rotation.z = Math.PI
-                    }
-                    else if (-arrow_to[i - 1][j].x + arrow_from[i - 1][j].x > 0.1) {
-                        cone[cs_count].rotation.z = Math.PI/2
-                    }
-                    else if (arrow_to[i - 1][j].x - arrow_from[i - 1][j].x > 0.1) {
-                        cone[cs_count].rotation.z = -Math.PI/2
-                    }
-                }
-                else {
-                    cone[cs_count].rotation.z = block_angle[i - 1] - Math.PI/2
-                }
-
-                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
-                    scene.add(chotasphere[cs_count]);
-                    if (alld_question_no>60 && subsubstep != -100) {
-                        //audio = new Audio(fbdi_audio[i - 1])
-                        // audio.play();
-                        let player = document.getElementById('radio');
-                        player.pause()
-                        player.src = fbdintersection_bq;
-                        // player.play()
-
-                    }
-                    if (alld_question_no>60 && subsubstep == -100) {
-                        //audio = new Audio(fbdi_audio[i - 1])
-                        // audio.play();
-                        let player = document.getElementById('radio');
-                        player.pause()
-                        player.src = steptwo5;
-                        player.play()
-                        if (answerClicked > 0 && iscorrect == 1) {
-
-                            let player = document.getElementById('radio');
-                            player.pause()
-                            player.src = fbdi_audio_after[i - 1];
-                            // player.play()
-                        }
-                    }
-
-                }
-
-                if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
-                    scene.add(chotasphere[cs_count]);
-                    scene.add(arrowHelper[cs_count]);
-                    scene.add(cone[cs_count]);
-                    if (subsubstep == 100) {
-                        //audio = new Audio(fbdf_audio[i - 1])
-                        //  audio.play();
-                        let player = document.getElementById('radio');
-                        player.pause()
-                        player.src = fbdf_audio[i - 1];
-                        // player.play()
-                    }
-                }
-
-
-
-                cs_count = cs_count + 1;
-
-
-
-
-            }
-            mg_points = []
-
-            var mg_from = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y, 0.00073);
-            var mg_to = new THREE.Vector3(meshk[i - 1].position.x- 0.5*mg_length_1, meshk[i - 1].position.y - 0.5*mg_length_1, 0.00073);
-
-            if (mg_shift_checker == 1) {
-                mg_to.x = mg_to.x + 1/6;
-                mg_from.x = mg_to.x;
-            }
-
-            mg_points.push(mg_from)
-            mg_points.push(mg_to)
-
-            const mg_geometry = new THREE.BufferGeometry().setFromPoints(mg_points);
-
-            //var mg_direction = mg_to.clone().sub(mg_from);
-            //var mg_length = mg_direction.length();
-            //var mg_arrow_direction = arrow_to[meshk[i - 1].position.x][meshk[i - 1].position.y - 1].clone().sub(arrow_from[meshk[i - 1].position.x][meshk[i - 1].position.y]);
-            //var mg_arrow_length = mg_direction.length();
-            //var mg_arrowHelper = new THREE.ArrowHelper(mg_direction.normalize(), mg_from, mg_length, 0xffffff);//0x0A9EFF
-
-            var mg_line = new THREE.Line(mg_geometry, mg_material);
-
-            mg_cone.position.x = mg_to.x; //changed from meshk[i - 1].position.x;
-            mg_cone.position.y = mg_to.y //+ mg_cone_shift; //changed from meshk[i - 1].position.y - 1.43;
-            mg_cone.position.z = 0
-            // if (arrow_to[i - 1][j].y < arrow_from[i - 1][j].y) {
-            mg_cone.rotation.z = 3*Math.PI/4
-            //}
-
-            //adding code for mg chotasphere on 30 June
-
-            const material_mg_chotasphere = new THREE.MeshBasicMaterial()
-            material_mg_chotasphere.color = new THREE.Color(0xffffff)
-            //materialfbd.transparent = true
-            //materialfbd.opacity = 0.8
-            var mg_chotasphere = new THREE.Mesh(
-                new THREE.SphereGeometry(0.1, 16, 16),
-                material_mg_chotasphere
-            )
-
-            mg_chotasphere.position.x = mg_from.x;
-            mg_chotasphere.position.y = mg_from.y;
-
-            if (step == "fbd" && substep == i && subsubstep == -300)
-                scene.add(mg_chotasphere)
-
-            // code for mg chotasphere ends
-
-            if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
-                scene.add(mg_line)
-                scene.add(mg_cone)
-            }
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-        //debugger
-        var chotasphere = []
-        var mg_cone
-        var mg_points
         var mg_material = new THREE.MeshBasicMaterial({color: 'white'})
 
         var cs_count = 0;
@@ -4362,7 +3723,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             mg_points = []
 
             var mg_from = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y, 0.00073);
-            var mg_to = new THREE.Vector3(meshk[i - 1].position.x+ 0.5*mg_length_1, meshk[i - 1].position.y - 0.5*mg_length_1, 0.00073);
+            var mg_to = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y - mg_length_1, 0.00073);
 
             if (mg_shift_checker == 1) {
                 mg_to.x = mg_to.x + 1/6;
@@ -4386,7 +3747,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             mg_cone.position.y = mg_to.y //+ mg_cone_shift; //changed from meshk[i - 1].position.y - 1.43;
             mg_cone.position.z = 0
             // if (arrow_to[i - 1][j].y < arrow_from[i - 1][j].y) {
-            mg_cone.rotation.z = 5*Math.PI/4
+            mg_cone.rotation.z = Math.PI
             //}
 
             //adding code for mg chotasphere on 30 June
@@ -4414,13 +3775,6 @@ if (answerClicked > 0 && iscorrect != 1) {
             }
 
         }
-
-
-
-
-
-
-
 
         const materialcs_cu = new THREE.MeshBasicMaterial()
         materialcs_cu.color = new THREE.Color(0xffffff)
@@ -4819,8 +4173,8 @@ if (answerClicked > 0 && iscorrect != 1) {
 
 
                 if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == -300)) {
-                    // scene.add(chotasphere[cs_count]);
-                    if (bigblockdata.mass!=0 && subsubstep != -100) {
+                    scene.add(chotasphere[cs_count]);
+                    if (bigblockdata.mass>0 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -4829,18 +4183,19 @@ if (answerClicked > 0 && iscorrect != 1) {
                         // player.play()
 
                     }
-                    if (bigblockdata.mass!=0 && subsubstep == -100) {
+                    if (bigblockdata.mass>0 && subsubstep == -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
-                        player.src = steptwo5;
+                        player.pause()
+                        player.src = steptwo4;
                         player.play()
-                        if (iscorrect == 1) {
+                        if (answerClicked > 0 && iscorrect == 1) {
 
                             let player = document.getElementById('radio');
                             player.pause()
-                            player.src = well;
-                            player.play()
+                            player.src = fbdi_audio_after[i + n_b - 1];
+                            // player.play()
                         }
                     }
                 }
@@ -4999,12 +4354,6 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                         meshk[i - 1].position.x = block_ini_pos_x[i - 1];
                         meshk[i - 1].position.y = block_ini_pos_y[i - 1];
-                        temp1.position.x = x1;
-                        temp2.position.x = x2;
-                        temp3.position.x = x3;
-                        temp1.position.y = y1;
-                        temp2.position.y = y2;
-                        temp3.position.y = y3;
 
                         if (blockdata[i].forces.x[0] != 0) {
                             force_line_x[i - 1].position.x = force_line_x_ini_pos_x[i - 1];
@@ -5060,41 +4409,16 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
                         if (stringdata[sc]["first obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["first obj"] == i) {
-                                if(alld_question_no==68 && substep==1 && subsubstep==1){
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
-                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
-                                }
-                                else{
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                                }
-                                
-                                if(i==1){
-                                    temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
-                                    temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
-                                    temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                                    temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                                    temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                                }
+
                             }
                         }
                         if (stringdata[sc]["second obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[sc]["second obj"] == i) {
-                                if(alld_question_no==68 && substep==1 && subsubstep==1){
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
-                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
-                                }
-                                else{
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                                }
-                        if(i==1){
-                            temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
-                            temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
-                            temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                            temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                            temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                        }
+
                             }
                         }
                     }
@@ -5109,13 +4433,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (step == "motion" || (step == "constraint" && subsubstep == -1)) {
                         meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                        if(i==1){
-                            temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
-                            temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
-                            temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                            temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                            temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                        }
+
                         //14th June starts
                         if (blockdata[i].forces.x[0] != 0) {
                             force_line_x[i - 1].position.x = force_line_x[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
@@ -5137,41 +4455,15 @@ if (answerClicked > 0 && iscorrect != 1) {
                     if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>")) {
                         if (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[substep]["first obj"] == i && (subsubstep == 1 || subsubstep == 100)) {
-                                if(alld_question_no==68 && substep==1 && subsubstep==1){
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
-                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
-                                }
-                                else{
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                        meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                                }
-                                if(i==1){
-                                    temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
-                                    temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
-                                    temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                                    temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                                    temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                                }
+                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
                             }
                         }
 
                         if (stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>") {
                             if (stringdata[substep]["second obj"] == i && (subsubstep == 2 || subsubstep == 100)) {
-                                if(alld_question_no==68 && substep==1 && subsubstep==1){
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (0.9) * time_main * time_main / 5000;
-                                    meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (0.9) * time_main * time_main / 5000;
-                                }
-                                else{
-                                    meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                        meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                                }
-                                if(i==1){
-                                    temp2.position.x = temp2.position.x + 0.5 * (1.38) * time_main * time_main / 5000;
-                                    temp2.position.y = temp2.position.y + 0.5 * (1.38) * time_main * time_main / 5000;
-                                    temp1.position.x = temp1.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                                    temp3.position.x = temp3.position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
-                                    temp3.position.y = temp3.position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
-                                }
+                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                                meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
                             }
                         }
                     }
@@ -5237,8 +4529,6 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 if(alld_question_no>60){
                                     if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
-                                        meshbb2.position.x=meshp[i - 1].position.x+3.5;
-                                        meshbb3.position.x=meshp[i - 1].position.x;
                                     }
                                 }
                                 
@@ -5252,8 +4542,6 @@ if (answerClicked > 0 && iscorrect != 1) {
                         if(alld_question_no>60){
                             if(i==1 && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
-                                meshbb2.position.x=meshp[i - 1].position.x+3.5;
-                                meshbb3.position.x=meshp[i - 1].position.x;
                             }
                         }
 
@@ -5270,8 +4558,6 @@ if (answerClicked > 0 && iscorrect != 1) {
                         if(alld_question_no>60){
                             if(i==1 && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
-                                meshbb2.position.x=meshp[i - 1].position.x+3.5;
-                                meshbb3.position.x=meshp[i - 1].position.x;
                             }
                         }
                     }
@@ -5284,8 +4570,6 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 if(alld_question_no>60){
                                     if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
-                                        meshbb2.position.x=meshp[i - 1].position.x+3.5;
-                                        meshbb3.position.x=meshp[i - 1].position.x;
                                     }
                                 }
                             }
@@ -5298,8 +4582,6 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 if(alld_question_no>60){
                                     if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
-                                        meshbb2.position.x=meshp[i - 1].position.x+3.5;
-                                        meshbb3.position.x=meshp[i - 1].position.x;
                                     }
                                 }
                             }
@@ -5586,13 +4868,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         mountRef.current.appendChild(renderer.domElement);
         return  () => mountRef.current.removeChild(renderer.domElement);
                       
-    }
-catch  (error){
-
-    navigate('/error')
-    console.log(error.message);
-}
-}, [props]);
+    }, [props]);
 
     return (
         <div ref={mountRef}>
