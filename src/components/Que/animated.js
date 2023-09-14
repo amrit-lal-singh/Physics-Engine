@@ -147,7 +147,7 @@ const TestThree = (props) => {
         try{
         const scene = new THREE.Scene()
         //******************************************SHIVAM CODE STARTS */      
-        const loader = new THREE.FontLoader();
+        // const loader = new THREE.FontLoader();
 
         /**
                 * Lights
@@ -649,7 +649,7 @@ const TestThree = (props) => {
                 
         //     }
         // }
-        
+
         var soundtension = new Howl({
             
             src: motivate[ranval],
@@ -2408,6 +2408,46 @@ if (answerClicked > 0 && iscorrect != 1) {
         var usevarx = 0
 
         var usevary = 0
+        const loader = new THREE.FontLoader();
+         //camera.position.z = 900;
+        loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
+            const textGeometry = new THREE.TextGeometry("ranom string", {
+            font: font,
+            size: 80,
+            height: 5,
+            curveSegments: 10,
+            bevelEnabled: false,
+            bevelOffset: 0,
+            bevelSegments: 1,
+            bevelSize: 0.3,
+            bevelThickness: 1
+            });
+            const material = [
+            new THREE.MeshPhongMaterial({ color: "yellow" }), // front
+            new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
+            ];
+            const textMesh = new THREE.Mesh(textGeometry, material);
+            textMesh.castShadow = false
+            textMesh.position.y = 0
+            textMesh.position.x = 0
+            textMesh.position.z = -900
+            scene.add(textMesh);
+            });
+        
+        
+            /**
+            * Lights
+            **/
+        
+            // Add a point light with #fff color, .7 intensity, and 0 distance
+            var light = new THREE.PointLight(0xffffff, 1, 0);
+        
+            // Specify the light's position
+            light.position.set(1, 1, 100);
+        
+            // Add the light to the scene
+            scene.add(light)
+            // ---********************
         for (let i = 1; i < n_b + 1; i++) {
             loader.load('Teko_Medium_Regular.json', function (font) {
                 const textGeometry_t1 = new THREE.TextGeometry("a" + i, {
