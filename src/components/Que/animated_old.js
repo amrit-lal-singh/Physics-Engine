@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import React from "react";
-import { Link } from "react-router-dom";
 import { propTypes } from "react-latex";
 import * as THREE from "three";
 import typefaceFont from './fonts/optimer_bold.typeface.json'
@@ -57,11 +56,11 @@ import steptwo4 from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (30).m4
 import steptwo5 from './AUDIOS/rekindlyfindthecodeattached/Recording (11).m4a'
 import steptwo6 from './AUDIOS/rekindlyfindthecodeattached/Recording (13).m4a'
 import mtv from './AUDIOS/rekindlyfindthecodeattached/Recording (14).m4a'
-import steptwo8 from './AUDIOS/rekindlyfindthecodeattached/Recording (15).m4a'
+import steptwo8 from './AUDIOS/rekindlyfindthecodeattached/force and acc resolve.m4a'
 import constr from './AUDIOS/rekindlyfindthecodeattached/Recording (19).m4a'
 import constr1 from './AUDIOS/rekindlyfindthecodeattached/Recording (21).m4a'
 
-import stepwedge from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (22).m4a'
+import stepwedge from './AUDIOS/rekindlyfindthecodeattached (1)/wedge waali recording.m4a'
 import stepwedge1 from './AUDIOS/rekindlyfindthecodeattached (1)/Recording (25).m4a'
 
 import steptwo3 from './AUDIOS/rekindlyfindthecodeattached/Recording (6).m4a'
@@ -138,14 +137,17 @@ import finalstepaudio from './AUDIOS/step4new/finalstepaudio.mp3'
 import lateeqnkya from './AUDIOS/advance/lateeqnkya.mp3'
 import Back from "./Back";
 import {Howl, Howler} from 'howler';
+import { Link, useNavigate  } from "react-router-dom";
+
 const TestThree = (props) => {
    
     const mountRef = useRef(null);
-
+    const navigate = useNavigate();
     useEffect(() => {
+        try{
         const scene = new THREE.Scene()
         //******************************************SHIVAM CODE STARTS */      
-        const loader = new THREE.FontLoader();
+        // const loader = new THREE.FontLoader();
 
         /**
                 * Lights
@@ -159,11 +161,7 @@ const TestThree = (props) => {
         var totalunknowns = 0;
         var count =0;
         var pyplayer = document.getElementById('pysound');
-        pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
-
         var gplayer = document.getElementById('gsound');
-        gplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
-
         var count = 0;
 
         // function startpart1() {
@@ -494,8 +492,7 @@ const TestThree = (props) => {
          
         if (step == "motion" && substep == 0  && subsubstep == (-1)) {
             let pyplayer = document.getElementById('radio');
-            pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
-
+ 
             pyplayer.src = steponepone3;
             // setTimeout( ()=>{ pyplayer.pause();
             //                        },50000 );
@@ -652,7 +649,7 @@ const TestThree = (props) => {
                 
         //     }
         // }
-        
+
         var soundtension = new Howl({
             
             src: motivate[ranval],
@@ -667,8 +664,6 @@ const TestThree = (props) => {
             
             gplayer.pause();
             let pyplayer = document.getElementById('radio');
-            pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
-
             // player.pause();
             // player.src = unkb_audio[1];
             // player.play()
@@ -686,8 +681,6 @@ const TestThree = (props) => {
                     count++;
                 }
                 let player = document.getElementById('radio');
-                player.volume = Math.min(pyplayer.volume * 2.5, 1.0);
-
                 player.src = well;
                 player.play();
                 // player.pause()
@@ -811,8 +804,6 @@ const TestThree = (props) => {
         if (step == "motion" && substep == 0 && subsubstep == 4) {
             gplayer.pause();
             let pyplayer = document.getElementById('radio');
-            pyplayer.volume = Math.min(pyplayer.volume * 2.5, 1.0);
-
             // player.pause();
             // player.src = unkb_audio[1];
             // player.play()
@@ -953,7 +944,6 @@ const TestThree = (props) => {
         //this is red block 
         soundtension.pause();
         let xy = document.getElementById('radio');
-        xy.volume = Math.min(pyplayer.volume * 2.5, 1.0);
 
         gplayer.pause();
             xy.src = steptwo5;
@@ -962,8 +952,6 @@ const TestThree = (props) => {
                                 let x = document.getElementById('radio');
                                 xy.pause();
                                 x.source=well;
-                                soundfbd.volume = Math.min(soundfbd.volume * 2.5, 1.0);
-
                                 soundfbd.play();
                                 // sund.play("track01");
                                 // sund.on('end', function(){
@@ -979,14 +967,12 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo4;
-            gplayer.play();
         }
         if(flag>1) {
             gplayer.src = steptwo6;
-            gplayer.play();
         }
             
-                              
+                              gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -998,15 +984,12 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo6;
-            gplayer.play();
-
         }
         if(flag>1) {
             gplayer.src = steptwo6;
-            gplayer.play();
-
         }
             
+                              gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -1078,15 +1061,12 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo4;
-            gplayer.play();
-
         }
         if(flag>1) {
             gplayer.src = steptwo6;
-            gplayer.play();
-
         }
             
+                              gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -1098,15 +1078,12 @@ const TestThree = (props) => {
         gplayer.pause();
         if(flag==1){
             gplayer.src = steptwo6;
-            gplayer.play();
-
         }
         if(flag>1) {
             gplayer.src = steptwo6;
-            gplayer.play();
-
         }
             
+                              gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
                                 soundfbd.play();
@@ -1507,17 +1484,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                     }
                 }
                     
-                if (step == "constraint" && (subsubstep == -1 ||subsubstep == 0)){
+                if (step == "constraint" && (subsubstep == -1 ||subsubstep == 0))
                     scene.add(meshbb);
-                }
-
-                if(step=="constraint" && alld_question_no==68 && subsubstep==1 && substep==1){
-                    meshbb2.position.x=meshbb2.position.x+7
-                    xyz=meshbb2.position.x;
-                    scene.add(meshbb2);
-                    scene.add(meshbb1);
-                    
-                                }
             }
         }
             //mangalik bigblock code ends
@@ -1537,7 +1505,6 @@ if (answerClicked > 0 && iscorrect != 1) {
         var block_ini_pos_y = new Array(n_b);
         var pulley_ini_pos_x = new Array(n_p);
         var pulley_ini_pos_y = new Array(n_p);
-        var pull_x,pull_y,redb_x, xyz;
         var text_loc_x = new Array(n_b);
         var text_loc_y = new Array(n_b);
         var acc_arrow_to
@@ -1733,7 +1700,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                 // eq2.rotation.z = block_angle[i - 1]*2
                 // eq1.rotation.z = block_angle[i - 1]*2
             }
-            debugger
+            
             meshk[i - 1].position.x = (blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
             meshk[i - 1].position.y = (blockdata[i].loc[1] - 150) / 15;
             meshk[i - 1].rotation.z = block_angle[i - 1]
@@ -1750,7 +1717,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             y3=temp3.position.y;
             block_ini_pos_x[i - 1] = meshk[i - 1].position.x;
             block_ini_pos_y[i - 1] = meshk[i - 1].position.y;
-            text_loc_x[i - 1] = meshk[i - 1].position.x + 1.8 * blockdata[i].textloc
+            text_loc_x[i - 1] = meshk[i - 1].position.x + 0.8 * blockdata[i].textloc
             text_loc_y[i - 1] = meshk[i - 1].position.y
 
             // added arrdir key in the json file to help determine arrow direction, made the textloc key 2D
@@ -2441,1329 +2408,71 @@ if (answerClicked > 0 && iscorrect != 1) {
         var usevarx = 0
 
         var usevary = 0
-        
-        // const loader = new THREE.FontLoader();
+        const loader = new THREE.FontLoader();
          //camera.position.z = 900;
-         if(alld_question_no==11){
-            if(step!="constraint"){
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(substep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -560
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(step, {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 600
-            //     textMesh.position.x = -600
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(subsubstep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -50
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("T1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "white" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 150
-                textMesh.position.x = -240
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("T2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "white" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -350
-                textMesh.position.x = +140
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });            
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "red" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 50
-                textMesh.position.x = -300
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -480
-                textMesh.position.x = +250
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a3", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = +50
-                textMesh.position.x = +250
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-                
-
-                    
-                    
-            /**
-            * Lights
-            **/
-        
-            // Add a point light with #fff color, .7 intensity, and 0 distance
-            var light = new THREE.PointLight(0xffffff, 1, 0);
-        
-            // Specify the light's position
-            light.position.set(1, 1, 100);
-        
-            // Add the light to the scene
-            scene.add(light)
-            // ---********************
-
-
-                }}
-        if(alld_question_no==34){
-            if(step!="constraint"){
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(substep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -560
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(step, {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 600
-            //     textMesh.position.x = -600
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(subsubstep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -50
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("T1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "white" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 200
-                textMesh.position.x = -100
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "red" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 350
-                textMesh.position.x = -260
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -290
-                textMesh.position.x = +350
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-                
-
-                    
-                    
-            /**
-            * Lights
-            **/
-        
-            // Add a point light with #fff color, .7 intensity, and 0 distance
-            var light = new THREE.PointLight(0xffffff, 1, 0);
-        
-            // Specify the light's position
-            light.position.set(1, 1, 100);
-        
-            // Add the light to the scene
-            scene.add(light)
-            // ---********************
-
-
-                }}
-        if(alld_question_no==39){
-            if(step!="constraint"){
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(substep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -560
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(step, {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 600
-            //     textMesh.position.x = -600
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(subsubstep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -50
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("T1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "white" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 150
-                textMesh.position.x = -450
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("T2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "white" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -230
-                textMesh.position.x = +500
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });            
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "red" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 350
-                textMesh.position.x = -600
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -350
-                textMesh.position.x = +300
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a3", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = +340
-                textMesh.position.x = -250
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });                
-
-                    
-                    
-            /**
-            * Lights
-            **/
-        
-            // Add a point light with #fff color, .7 intensity, and 0 distance
-            var light = new THREE.PointLight(0xffffff, 1, 0);
-        
-            // Specify the light's position
-            light.position.set(1, 1, 100);
-        
-            // Add the light to the scene
-            scene.add(light)
-            // ---********************
-
-
-                }}
-        if(alld_question_no==68){
-            if(step=="constraint" || (step=="motion" && substep==0 && subsubstep == 4) || (step=="motion" && substep==0 && subsubstep == 3) ){ }
-            else{ 
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(substep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -560
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(step, {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 600
-            //     textMesh.position.x = -600
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(subsubstep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -50
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "red" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 150
-                textMesh.position.x = -560
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -425
-                textMesh.position.x = +450
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a3", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "purple" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = +10
-                textMesh.position.x = +400
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a4", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = +325
-                textMesh.position.x = -220
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            }
-            if(step=="fbd"  && substep==1 && subsubstep == 100){ 
-                loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                    const textGeometry = new THREE.TextGeometry("N1", {
-                    font: font,
-                    size: 30,
-                    height: 5,
-                    curveSegments: 10,
-                    bevelEnabled: false,
-                    bevelOffset: 0,
-                    bevelSegments: 1,
-                    bevelSize: 0.3,
-                    bevelThickness: 1
-                    });
-                    const material = [
-                    new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                    new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                    ];
-                    const textMesh = new THREE.Mesh(textGeometry, material);
-                    textMesh.castShadow = false
-                    textMesh.position.y = 50
-                    textMesh.position.x = -600
-                    textMesh.position.z = -900
-                    scene.add(textMesh);
-                    });
-                loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                    const textGeometry = new THREE.TextGeometry("T1", {
-                    font: font,
-                    size: 30,
-                    height: 5,
-                    curveSegments: 10,
-                    bevelEnabled: false,
-                    bevelOffset: 0,
-                    bevelSegments: 1,
-                    bevelSize: 0.3,
-                    bevelThickness: 1
-                    });
-                    const material = [
-                    new THREE.MeshPhongMaterial({ color: "white" }), // front
-                    new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                    ];
-                    const textMesh = new THREE.Mesh(textGeometry, material);
-                    textMesh.castShadow = false
-                    textMesh.position.y = 120
-                    textMesh.position.x = -460
-                    textMesh.position.z = -900
-                    scene.add(textMesh);
-                    });     
-            }
-            if((step=="fbd"  && substep==2 && subsubstep == 2 || step=="fbd"  && substep==2 && subsubstep == 100)){ 
-                loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                    const textGeometry = new THREE.TextGeometry("T2", {
-                    font: font,
-                    size: 30,
-                    height: 5,
-                    curveSegments: 10,
-                    bevelEnabled: false,
-                    bevelOffset: 0,
-                    bevelSegments: 1,
-                    bevelSize: 0.3,
-                    bevelThickness: 1
-                    });
-                    const material = [
-                    new THREE.MeshPhongMaterial({ color: "white" }), // front
-                    new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                    ];
-                    const textMesh = new THREE.Mesh(textGeometry, material);
-                    textMesh.castShadow = false
-                    textMesh.position.y = -320
-                    textMesh.position.x = +340
-                    textMesh.position.z = -900
-                    scene.add(textMesh);
-                    });     
-            
-            }
-
-            if((step=="fbd"  && substep==5 && subsubstep == 3 )){ 
-                loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                    const textGeometry = new THREE.TextGeometry("T2", {
-                    font: font,
-                    size: 30,
-                    height: 5,
-                    curveSegments: 10,
-                    bevelEnabled: false,
-                    bevelOffset: 0,
-                    bevelSegments: 1,
-                    bevelSize: 0.3,
-                    bevelThickness: 1
-                    });
-                    const material = [
-                    new THREE.MeshPhongMaterial({ color: "white" }), // front
-                    new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                    ];
-                    const textMesh = new THREE.Mesh(textGeometry, material);
-                    textMesh.castShadow = false
-                    textMesh.position.y = -160
-                    textMesh.position.x = +340
-                    textMesh.position.z = -900
-                    scene.add(textMesh);
-                    });  
-                    
-                    loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                        const textGeometry = new THREE.TextGeometry("T1", {
-                        font: font,
-                        size: 30,
-                        height: 5,
-                        curveSegments: 10,
-                        bevelEnabled: false,
-                        bevelOffset: 0,
-                        bevelSegments: 1,
-                        bevelSize: 0.3,
-                        bevelThickness: 1
-                        });
-                        const material = [
-                        new THREE.MeshPhongMaterial({ color: "white" }), // front
-                        new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                        ];
-                        const textMesh = new THREE.Mesh(textGeometry, material);
-                        textMesh.castShadow = false
-                        textMesh.position.y = +140
-                        textMesh.position.x = +280
-                        textMesh.position.z = -900
-                        scene.add(textMesh);
-                        });                     
-            
-            }
-            if((step=="fbd"  && substep==5 && subsubstep == 1 )){ 
-                    loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                        const textGeometry = new THREE.TextGeometry("T1", {
-                        font: font,
-                        size: 30,
-                        height: 5,
-                        curveSegments: 10,
-                        bevelEnabled: false,
-                        bevelOffset: 0,
-                        bevelSegments: 1,
-                        bevelSize: 0.3,
-                        bevelThickness: 1
-                        });
-                        const material = [
-                        new THREE.MeshPhongMaterial({ color: "white" }), // front
-                        new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                        ];
-                        const textMesh = new THREE.Mesh(textGeometry, material);
-                        textMesh.castShadow = false
-                        textMesh.position.y = +140
-                        textMesh.position.x = +280
-                        textMesh.position.z = -900
-                        scene.add(textMesh);
-                        });                     
-            
-            }
-            if((step=="fbd"  && substep==5 && subsubstep == 100 )){ 
-                loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                    const textGeometry = new THREE.TextGeometry("T2", {
-                    font: font,
-                    size: 30,
-                    height: 5,
-                    curveSegments: 10,
-                    bevelEnabled: false,
-                    bevelOffset: 0,
-                    bevelSegments: 1,
-                    bevelSize: 0.3,
-                    bevelThickness: 1
-                    });
-                    const material = [
-                    new THREE.MeshPhongMaterial({ color: "white" }), // front
-                    new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                    ];
-                    const textMesh = new THREE.Mesh(textGeometry, material);
-                    textMesh.castShadow = false
-                    textMesh.position.y = -160
-                    textMesh.position.x = +340
-                    textMesh.position.z = -900
-                    scene.add(textMesh);
-                    });  
-                    
-                    loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                        const textGeometry = new THREE.TextGeometry("T1", {
-                        font: font,
-                        size: 30,
-                        height: 5,
-                        curveSegments: 10,
-                        bevelEnabled: false,
-                        bevelOffset: 0,
-                        bevelSegments: 1,
-                        bevelSize: 0.3,
-                        bevelThickness: 1
-                        });
-                        const material = [
-                        new THREE.MeshPhongMaterial({ color: "white" }), // front
-                        new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                        ];
-                        const textMesh = new THREE.Mesh(textGeometry, material);
-                        textMesh.castShadow = false
-                        textMesh.position.y = +140
-                        textMesh.position.x = +250
-                        textMesh.position.z = -900
-                        scene.add(textMesh);
-                        });   
-                        loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                            const textGeometry = new THREE.TextGeometry("T1", {
-                            font: font,
-                            size: 30,
-                            height: 5,
-                            curveSegments: 10,
-                            bevelEnabled: false,
-                            bevelOffset: 0,
-                            bevelSegments: 1,
-                            bevelSize: 0.3,
-                            bevelThickness: 1
-                            });
-                            const material = [
-                            new THREE.MeshPhongMaterial({ color: "white" }), // front
-                            new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                            ];
-                            const textMesh = new THREE.Mesh(textGeometry, material);
-                            textMesh.castShadow = false
-                            textMesh.position.y = +140
-                            textMesh.position.x = +360
-                            textMesh.position.z = -900
-                            scene.add(textMesh);
-                            });                           
-            } 
-            if((step=="fbd"  && substep==5 && subsubstep == 3 )){ 
-                            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                                const textGeometry = new THREE.TextGeometry("T2", {
-                                font: font,
-                                size: 30,
-                                height: 5,
-                                curveSegments: 10,
-                                bevelEnabled: false,
-                                bevelOffset: 0,
-                                bevelSegments: 1,
-                                bevelSize: 0.3,
-                                bevelThickness: 1
-                                });
-                                const material = [
-                                new THREE.MeshPhongMaterial({ color: "white" }), // front
-                                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                                ];
-                                const textMesh = new THREE.Mesh(textGeometry, material);
-                                textMesh.castShadow = false
-                                textMesh.position.y = -160
-                                textMesh.position.x = +340
-                                textMesh.position.z = -900
-                                scene.add(textMesh);
-                                });  
-                                
-                                loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                                    const textGeometry = new THREE.TextGeometry("T1", {
-                                    font: font,
-                                    size: 30,
-                                    height: 5,
-                                    curveSegments: 10,
-                                    bevelEnabled: false,
-                                    bevelOffset: 0,
-                                    bevelSegments: 1,
-                                    bevelSize: 0.3,
-                                    bevelThickness: 1
-                                    });
-                                    const material = [
-                                    new THREE.MeshPhongMaterial({ color: "white" }), // front
-                                    new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                                    ];
-                                    const textMesh = new THREE.Mesh(textGeometry, material);
-                                    textMesh.castShadow = false
-                                    textMesh.position.y = +140
-                                    textMesh.position.x = +280
-                                    textMesh.position.z = -900
-                                    scene.add(textMesh);
-                                    });                     
-                        
-            }                                         
-            
-                         
-                
-                    /**
-                    * Lights
-                    **/
-                
-                    // Add a point light with #fff color, .7 intensity, and 0 distance
-                    var light = new THREE.PointLight(0xffffff, 1, 0);
-                
-                    // Specify the light's position
-                    light.position.set(1, 1, 100);
-                
-                    // Add the light to the scene
-                    scene.add(light)
-                    // ---********************
-                }
-        if(alld_question_no==69){
-            if(step!="constraint"){
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(substep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -560
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(step, {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 600
-            //     textMesh.position.x = -600
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-            // loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-            //     const textGeometry = new THREE.TextGeometry(subsubstep.toString(), {
-            //     font: font,
-            //     size: 70,
-            //     height: 5,
-            //     curveSegments: 10,
-            //     bevelEnabled: false,
-            //     bevelOffset: 0,
-            //     bevelSegments: 1,
-            //     bevelSize: 0.3,
-            //     bevelThickness: 1
-            //     });
-            //     const material = [
-            //     new THREE.MeshPhongMaterial({ color: "red" }), // front
-            //     new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-            //     ];
-            //     const textMesh = new THREE.Mesh(textGeometry, material);
-            //     textMesh.castShadow = false
-            //     textMesh.position.y = 450
-            //     textMesh.position.x = -50
-            //     textMesh.position.z = -900
-            //     scene.add(textMesh);
-            //     });
-
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("T1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "white" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 120
-                textMesh.position.x = -460
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("T2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "purple" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -220
-                textMesh.position.x = 360
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-                    
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry(subsubstep, {
-                font: font,
-                size: 70,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "red" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 350
-                textMesh.position.x = -560
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a1", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "red" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = 150
-                textMesh.position.x = -560
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-            
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a2", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "yellow" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = -425
-                textMesh.position.x = +450
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-                
-            loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry("a3", {
-                font: font,
-                size: 30,
-                height: 5,
-                curveSegments: 10,
-                bevelEnabled: false,
-                bevelOffset: 0,
-                bevelSegments: 1,
-                bevelSize: 0.3,
-                bevelThickness: 1
-                });
-                const material = [
-                new THREE.MeshPhongMaterial({ color: "purple" }), // front
-                new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
-                ];
-                const textMesh = new THREE.Mesh(textGeometry, material);
-                textMesh.castShadow = false
-                textMesh.position.y = +10
-                textMesh.position.x = +400
-                textMesh.position.z = -900
-                scene.add(textMesh);
-                });
-                    
-                    
-            /**
-            * Lights
-            **/
-        
-            // Add a point light with #fff color, .7 intensity, and 0 distance
-            var light = new THREE.PointLight(0xffffff, 1, 0);
-        
-            // Specify the light's position
-            light.position.set(1, 1, 100);
-        
-            // Add the light to the scene
-            scene.add(light)
-            // ---********************
-
-
-                }}
-    
-    
-        // for (let i = 1; i < n_b + 1; i++) {
-        //     loader.load('Teko_Medium_Regular.json', function (font) {
-        //         const textGeometry_t1 = new THREE.TextGeometry("a" + i, {
-        //             font: font,
-        //             size: 1,
-        //             height: 5,
-        //             curveSegments: 5,
-        //             bevelEnabled: false,
-
-        //         });
-        //         const material_t1 = [
-        //             new THREE.MeshPhongMaterial({ color: clr[i - 1] }), // front
-        //             new THREE.MeshPhongMaterial({ color: 0x000000 }) // side
-        //         ];
-        //         const textMesh = new THREE.Mesh(textGeometry_t1, material_t1);
-        //         textMesh.castShadow = true
-
-
-        //         textMesh.position.y = text_loc_y[i - 1]
-        //         textMesh.position.x = text_loc_x[i - 1]
-
-        //         scene.add(textMesh);
-
-        //     });
-        // }
-        loader.load('Teko_Medium_Regular.json', function (font) {
-        const textGeometry_t1 = new THREE.TextGeometry("a" + 1, {
+        loader.load('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json', function (font) {
+            const textGeometry = new THREE.TextGeometry("ranom string", {
             font: font,
-            size: 200,
+            size: 80,
             height: 5,
-            curveSegments: 5,
+            curveSegments: 10,
             bevelEnabled: false,
+            bevelOffset: 0,
+            bevelSegments: 1,
+            bevelSize: 0.3,
+            bevelThickness: 1
+            });
+            const material = [
+            new THREE.MeshPhongMaterial({ color: "yellow" }), // front
+            new THREE.MeshPhongMaterial({ color: 0x0000ff }) // side
+            ];
+            const textMesh = new THREE.Mesh(textGeometry, material);
+            textMesh.castShadow = false
+            textMesh.position.y = 0
+            textMesh.position.x = 0
+            textMesh.position.z = -900
+            scene.add(textMesh);
+            });
+        
+        
+            /**
+            * Lights
+            **/
+        
+            // Add a point light with #fff color, .7 intensity, and 0 distance
+            var light = new THREE.PointLight(0xffffff, 1, 0);
+        
+            // Specify the light's position
+            light.position.set(1, 1, 100);
+        
+            // Add the light to the scene
+            scene.add(light)
+            // ---********************
+        for (let i = 1; i < n_b + 1; i++) {
+            loader.load('Teko_Medium_Regular.json', function (font) {
+                const textGeometry_t1 = new THREE.TextGeometry("a" + i, {
+                    font: font,
+                    size: 1,
+                    height: 5,
+                    curveSegments: 5,
+                    bevelEnabled: false,
 
-        });
-        const material_t1 = [
-            new THREE.MeshPhongMaterial({ color: "white" }), // front
-            new THREE.MeshPhongMaterial({ color: "white" }) // side
-        ];
-        const textMesh = new THREE.Mesh(textGeometry_t1, material_t1);
-        textMesh.castShadow = true
+                });
+                const material_t1 = [
+                    new THREE.MeshPhongMaterial({ color: clr[i - 1] }), // front
+                    new THREE.MeshPhongMaterial({ color: 0x000000 }) // side
+                ];
+                const textMesh = new THREE.Mesh(textGeometry_t1, material_t1);
+                textMesh.castShadow = true
 
 
-        textMesh.position.y = 5
-        textMesh.position.x = 5
+                textMesh.position.y = text_loc_y[i - 1]
+                textMesh.position.x = text_loc_x[i - 1]
 
-        scene.add(textMesh);
-    });
+                scene.add(textMesh);
+
+            });
+        }
 
         const materialx = new THREE.MeshNormalMaterial()
         const materialy = new THREE.MeshNormalMaterial()
@@ -3803,51 +2512,9 @@ if (answerClicked > 0 && iscorrect != 1) {
         //scene.add( rdm3)
 
 
-        
 
         var meshp = new Array(n_p);
         //var clr = [ 0xff0000, 0xffff00, 0x0088ff, 0x00ff00]  
-
-        if(step=="constraint" && alld_question_no==68 && substep==1 && subsubstep==1){
-            const materialp1 = new THREE.MeshNormalMaterial()
-            const materialx = new THREE.MeshBasicMaterial({color: clr[0]}) //added by mangalik
-
-            var pull = new THREE.Mesh(
-                //changed from /20 to /15 on 20th June
-                new THREE.CylinderGeometry(10 / 15, 10 / 15, 0.03, 32),
-                materialp1
-            )
-            var redb = new THREE.Mesh(
-                new THREE.BoxGeometry(20 / 15, 20 / 15, 20 / 100000), //added by mangalik
-                materialx);
-
-            redb.position.x = (206.5685424949238 - 150) / 15 + 7-3.95; // where do these positions come from?
-            redb.position.y = (220.0 - 150) / 15-3;
-            redb.rotation.z = Math.PI/4;
-            // meshp[1].position.x=meshp[1].position.x+5
-            scene.add(pull)
-            scene.add(redb)
-
-            // 22june manglik code ends 
-            pull.rotation.x = Math.PI/2
-            pull.position.x = (206.5685424949238 - 150) / 15 + 7;
-            pull.position.y = (220.0 - 150) / 15; //changed from 20 to 15 on 20th June 
-            
-            //mangalik code starts
-            camera_avg_x = camera_avg_x + pull.position.x //added by mangalik
-            camera_avg_y = camera_avg_y + pull.position.y
-            num_of_obj = num_of_obj + 1
-            //mangalik code ends
-
-            pull_x = pull.position.x;
-            pull_y = pull.position.y;
-            
-            redb_x=redb.position.x;
-            
-        }
-
-        
-
         for (i = 1; i < n_p + 1; i++) {
 
             const materialp = new THREE.MeshNormalMaterial()
@@ -3860,7 +2527,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                 new THREE.CylinderGeometry(pulleydata[i].radius / 15, pulleydata[i].radius / 15, 0.03, 32),
                 materialp
             )
-            
+            //debugger
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
                 if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
                     scene.add(meshp[i-1])
@@ -3913,7 +2580,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             meshp[i - 1].rotation.x = Math.PI/2
             meshp[i - 1].position.x = (pulleydata[i].centre[0] - 150) / 15;
             meshp[i - 1].position.y = (pulleydata[i].centre[1] - 150) / 15; //changed from 20 to 15 on 20th June 
-            
+
             //mangalik code starts
             camera_avg_x = camera_avg_x + meshp[i - 1].position.x //added by mangalik
             camera_avg_y = camera_avg_y + meshp[i - 1].position.y
@@ -4467,16 +3134,10 @@ if (answerClicked > 0 && iscorrect != 1) {
             //added by mangalik, some conditions to draw horizontal string, but this is not perfect will have to change for inclined conditions
             if (strpart["first obj type"] == "<class 'blocksclass.blocks'>" && strpart["second obj type"] == "<class 'blocksclass.pulleys'>") {
                 pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
-                var temp = new THREE.Vector3((206.5685424949238 - 150) / 15 + 7-3.95, (220.0 - 150) / 15-3, 0)
-
                 points[i - 1] = []
-                var gg = []
                 endpos[i - 1] = []
-                var gg3=[]
                 pt1.z = 0
-                temp.z = 0
                 points[i - 1].push(pt1);
-                gg.push(temp);
                 angle = Math.PI - stringdata[i].angle
                 secondobj = meshp[stringdata[i]["second obj"] - 1]
 
@@ -4485,10 +3146,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                 else
                     pt2 = new THREE.Vector3(secondobj.position.x, secondobj.position.y, secondobj.position.z)
                     //console.log( pt2 )
-                var gg2 = new THREE.Vector3((206.5685424949238 - 150) / 15 + 7  + secondobj.geometry.parameters.radiusTop * Math.cos(angle), (220.0 - 150) / 15 + secondobj.geometry.parameters.radiusTop * Math.sin(angle), 0)
-
+                
                 points[i - 1].push(pt2);
-                gg.push(gg2);
 
                 if (block_angle[strpart["first obj"] - 1] == 0) {
                     if (Math.abs(pt1.y-pt2.y) < Math.abs(pt1.x-pt2.x))
@@ -4496,9 +3155,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                     else
                         pt2.x = pt1.x;
                 }
-                
+
                 const geometry4 = new THREE.BufferGeometry().setFromPoints(points[i - 1]);
-                const geometry10 = new THREE.BufferGeometry().setFromPoints(gg);
 
                 if (block_angle[strpart["first obj"] - 1] == 0) {
                     if (pt1.y < pt2.y) {
@@ -4522,21 +3180,11 @@ if (answerClicked > 0 && iscorrect != 1) {
                     pt1.y = pt1.y + Math.sin(block_angle[strpart["first obj"] - 1])*blockdata[stringdata[i]["first obj"]].size[0] / 30
                     endpos[i - 1].push(pt1)
                     endpos[i - 1].push(pt2)
-                    temp.x = temp.x + Math.cos(Math.PI/4)*20 / 30
-                    temp.y = temp.y + Math.sin(Math.PI/4)*20 / 30
-                    gg3.push(temp)
-                    gg3.push(gg2)
                 }
                 
-                var tempx=temp.x;
-                var gg2x=gg2.x;
+
 
                 linestr[i - 1] = new THREE.Line(geometry4, line_materials[strpart["str no"] - 1]);
-                var linex = new THREE.Line(geometry10, material4);
-                
-                if(substep==1 && subsubstep==1 && alld_question_no==68 && step=="constraint"){
-                    scene.add(linex);
-                }
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     if(!(alld_question_no==68 && step=="motion" && substep==0 && subsubstep>=3)){
                         scene.add(linestr[i - 1])
@@ -5262,6 +3910,385 @@ if (answerClicked > 0 && iscorrect != 1) {
         var chotasphere = []
         var mg_cone
         var mg_points
+        var mg_material = new THREE.MeshBasicMaterial({color: 'purple'})
+
+        var cs_count = 0;
+        for (i = 1; i < n_b + 1; i++) {
+            //debugger
+            //console.log(blockdata[i])
+            mg_cone = new THREE.Mesh(geometryc, materialx)
+
+            var mg_length_1 = blockdata[i].size[0]/13 // length of mg
+            //var mg_cone_shift = 0.11601* Math.pow(blockdata[i].size[0], 0.46)/ Math.pow(15, 0.46)
+            //camera_shift = 0//-(meshk[i - 1].position.x - 1.5) *0.11
+            var camera_shift_y = 0//-(meshk[i - 1].position.y - 1.5)*0.5
+
+            var mg_shift_checker = 0
+
+            for (j = 0; j < ip_x[i - 1].length; j++) {
+
+                if (block_angle[i - 1] == 0) {
+                    if (-ip_y[i - 1][j] + meshk[i - 1].position.y > 0.1)
+                        mg_shift_checker = 1;
+                }
+                //const elapsedTime2 = clock2.getElapsedTime()
+                console.log("angle", block_angle[i - 1])
+                //console.log("time", elapsedTime2 )
+                const materialch = new THREE.MeshBasicMaterial()
+                materialch.color = new THREE.Color(0xffffff)
+                //materialfbd.transparent = true
+                //materialfbd.opacity = 0.8
+                chotasphere[cs_count] = new THREE.Mesh(
+                    new THREE.SphereGeometry(0.1, 16, 16),
+                    materialch
+                )
+
+                chotasphere[cs_count].position.x = ip_x[i - 1][j];
+                chotasphere[cs_count].position.y = ip_y[i - 1][j];
+
+                arrow_direction = arrow_to[i - 1][j].clone().sub(arrow_from[i - 1][j]);
+                arrow_length = arrow_direction.length();
+                arrowHelper[cs_count] = new THREE.ArrowHelper(arrow_direction.normalize(), arrow_from[i - 1][j], arrow_length, 0xffffff);
+                cone[cs_count] = new THREE.Mesh(geometryc, materialc);
+
+
+                cone[cs_count].position.x = arrow_to[i - 1][j].x; //changed from ip to arrow_to
+                cone[cs_count].position.y = arrow_to[i - 1][j].y;//ip_y[i-1][j] + 0.5;
+
+                //added conditions for x-direction
+                if (block_angle[i - 1] == 0) {
+                    if (-arrow_to[i - 1][j].y + arrow_from[i - 1][j].y > 0.1) {
+                        cone[cs_count].rotation.z = Math.PI
+                    }
+                    else if (-arrow_to[i - 1][j].x + arrow_from[i - 1][j].x > 0.1) {
+                        cone[cs_count].rotation.z = Math.PI/2
+                    }
+                    else if (arrow_to[i - 1][j].x - arrow_from[i - 1][j].x > 0.1) {
+                        cone[cs_count].rotation.z = -Math.PI/2
+                    }
+                }
+                else {
+                    cone[cs_count].rotation.z = block_angle[i - 1] - Math.PI/2
+                }
+
+                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
+                    scene.add(chotasphere[cs_count]);
+                    if (alld_question_no>60 && subsubstep != -100) {
+                        //audio = new Audio(fbdi_audio[i - 1])
+                        // audio.play();
+                        let player = document.getElementById('radio');
+                        player.pause()
+                        player.src = fbdintersection_bq;
+                        // player.play()
+
+                    }
+                    if (alld_question_no>60 && subsubstep == -100) {
+                        //audio = new Audio(fbdi_audio[i - 1])
+                        // audio.play();
+                        let player = document.getElementById('radio');
+                        player.pause()
+                        player.src = steptwo5;
+                        player.play()
+                        if (answerClicked > 0 && iscorrect == 1) {
+
+                            let player = document.getElementById('radio');
+                            player.pause()
+                            player.src = fbdi_audio_after[i - 1];
+                            // player.play()
+                        }
+                    }
+
+                }
+                
+                if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
+                    scene.add(chotasphere[cs_count]);
+                    scene.add(arrowHelper[cs_count]);
+                    scene.add(cone[cs_count]);
+                    if (subsubstep == 100) {
+                        //audio = new Audio(fbdf_audio[i - 1])
+                        //  audio.play();
+                        let player = document.getElementById('radio');
+                        player.pause()
+                        player.src = fbdf_audio[i - 1];
+                        // player.play()
+                    }
+                }
+
+
+
+                cs_count = cs_count + 1;
+
+
+
+
+            }
+
+            mg_points = []
+
+            var mg_from = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y, 0.00073);
+            var mg_to = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y - mg_length_1, 0.00073);
+            // // Initial position of mg_to
+            // var initialMgTo = new THREE.Vector3(meshk[i - 1].position.x - 0.5 * mg_length_1, meshk[i - 1].position.y - 0.5 * mg_length_1, 0.00073);
+
+            // // Linearly interpolate mg_to based on elapsedTime2
+            // var mg_to = initialMgTo.clone(); // Start with initial position
+            // const elapsedTime2 = clock2.getElapsedTime()
+            // function updateMgTo(elapsedTime2) {
+            //     // Calculate the interpolation factor based on elapsedTime2
+            //     var interpolationFactor = elapsedTime2 / 0.003; // Adjust totalTime as needed
+
+            //     // Calculate the new position of mg_to based on linear interpolation
+            //     mg_to.x = initialMgTo.x + interpolationFactor * (meshk[i - 1].position.x - initialMgTo.x);
+            //     mg_to.y = initialMgTo.y + interpolationFactor * (meshk[i - 1].position.y - initialMgTo.y);
+
+            //     // ... rest of your code ...
+
+            //     // Call the function recursively or as needed
+            //     // requestAnimationFrame(updateMgTo);
+            // }
+
+            // // Start the interpolation loop
+            // updateMgTo(elapsedTime2);
+
+            if (mg_shift_checker == 1) {
+                mg_to.x = mg_to.x + 1/6;
+                mg_from.x = mg_to.x;
+            }
+
+            mg_points.push(mg_from)
+            mg_points.push(mg_to)
+
+            const mg_geometry = new THREE.BufferGeometry().setFromPoints(mg_points);
+
+            //var mg_direction = mg_to.clone().sub(mg_from);
+            //var mg_length = mg_direction.length();
+            //var mg_arrow_direction = arrow_to[meshk[i - 1].position.x][meshk[i - 1].position.y - 1].clone().sub(arrow_from[meshk[i - 1].position.x][meshk[i - 1].position.y]);
+            //var mg_arrow_length = mg_direction.length();
+            //var mg_arrowHelper = new THREE.ArrowHelper(mg_direction.normalize(), mg_from, mg_length, 0xffffff);//0x0A9EFF
+
+            var mg_line = new THREE.Line(mg_geometry, mg_material);
+
+            mg_cone.position.x = mg_to.x; //changed from meshk[i - 1].position.x;
+            mg_cone.position.y = mg_to.y //+ mg_cone_shift; //changed from meshk[i - 1].position.y - 1.43;
+            mg_cone.position.z = 0
+            // if (arrow_to[i - 1][j].y < arrow_from[i - 1][j].y) {
+            mg_cone.rotation.z = Math.PI
+            //}
+
+            //adding code for mg chotasphere on 30 June
+
+            const material_mg_chotasphere = new THREE.MeshBasicMaterial()
+            material_mg_chotasphere.color = new THREE.Color(0xffffff)
+            //materialfbd.transparent = true
+            //materialfbd.opacity = 0.8
+            var mg_chotasphere = new THREE.Mesh(
+                new THREE.SphereGeometry(0.1, 16, 16),
+                material_mg_chotasphere
+            )
+
+            mg_chotasphere.position.x = mg_from.x;
+            mg_chotasphere.position.y = mg_from.y;
+
+            if (step == "fbd" && substep == i && subsubstep == -300)
+                scene.add(mg_chotasphere)
+
+            // code for mg chotasphere ends
+
+            if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
+                scene.add(mg_line)
+                scene.add(mg_cone)
+            }
+
+        }
+
+
+
+
+
+        //debugger
+        var chotasphere = []
+        var mg_cone
+        var mg_points
+        var mg_material = new THREE.MeshBasicMaterial({color: 'yellow'})
+
+        var cs_count = 0;
+        for (i = 1; i < n_b + 1; i++) {
+            //debugger
+            //console.log(blockdata[i])
+            mg_cone = new THREE.Mesh(geometryc, materialx)
+
+            var mg_length_1 = blockdata[i].size[0]/13 // length of mg
+            //var mg_cone_shift = 0.11601* Math.pow(blockdata[i].size[0], 0.46)/ Math.pow(15, 0.46)
+            //camera_shift = 0//-(meshk[i - 1].position.x - 1.5) *0.11
+            var camera_shift_y = 0//-(meshk[i - 1].position.y - 1.5)*0.5
+
+            var mg_shift_checker = 0
+
+            for (j = 0; j < ip_x[i - 1].length; j++) {
+
+                if (block_angle[i - 1] == 0) {
+                    if (-ip_y[i - 1][j] + meshk[i - 1].position.y > 0.1)
+                        mg_shift_checker = 1;
+                }
+
+                const materialch = new THREE.MeshBasicMaterial()
+                materialch.color = new THREE.Color(0xffffff)
+                //materialfbd.transparent = true
+                //materialfbd.opacity = 0.8
+                chotasphere[cs_count] = new THREE.Mesh(
+                    new THREE.SphereGeometry(0.1, 16, 16),
+                    materialch
+                )
+
+                chotasphere[cs_count].position.x = ip_x[i - 1][j];
+                chotasphere[cs_count].position.y = ip_y[i - 1][j];
+
+                arrow_direction = arrow_to[i - 1][j].clone().sub(arrow_from[i - 1][j]);
+                arrow_length = arrow_direction.length();
+                arrowHelper[cs_count] = new THREE.ArrowHelper(arrow_direction.normalize(), arrow_from[i - 1][j], arrow_length, 0xffffff);
+                cone[cs_count] = new THREE.Mesh(geometryc, materialc);
+
+
+                cone[cs_count].position.x = arrow_to[i - 1][j].x; //changed from ip to arrow_to
+                cone[cs_count].position.y = arrow_to[i - 1][j].y;//ip_y[i-1][j] + 0.5;
+
+                //added conditions for x-direction
+                if (block_angle[i - 1] == 0) {
+                    if (-arrow_to[i - 1][j].y + arrow_from[i - 1][j].y > 0.1) {
+                        cone[cs_count].rotation.z = Math.PI
+                    }
+                    else if (-arrow_to[i - 1][j].x + arrow_from[i - 1][j].x > 0.1) {
+                        cone[cs_count].rotation.z = Math.PI/2
+                    }
+                    else if (arrow_to[i - 1][j].x - arrow_from[i - 1][j].x > 0.1) {
+                        cone[cs_count].rotation.z = -Math.PI/2
+                    }
+                }
+                else {
+                    cone[cs_count].rotation.z = block_angle[i - 1] - Math.PI/2
+                }
+
+                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
+                    scene.add(chotasphere[cs_count]);
+                    if (alld_question_no>60 && subsubstep != -100) {
+                        //audio = new Audio(fbdi_audio[i - 1])
+                        // audio.play();
+                        let player = document.getElementById('radio');
+                        player.pause()
+                        player.src = fbdintersection_bq;
+                        // player.play()
+
+                    }
+                    if (alld_question_no>60 && subsubstep == -100) {
+                        //audio = new Audio(fbdi_audio[i - 1])
+                        // audio.play();
+                        let player = document.getElementById('radio');
+                        player.pause()
+                        player.src = steptwo5;
+                        player.play()
+                        if (answerClicked > 0 && iscorrect == 1) {
+
+                            let player = document.getElementById('radio');
+                            player.pause()
+                            player.src = fbdi_audio_after[i - 1];
+                            // player.play()
+                        }
+                    }
+
+                }
+
+                if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
+                    scene.add(chotasphere[cs_count]);
+                    scene.add(arrowHelper[cs_count]);
+                    scene.add(cone[cs_count]);
+                    if (subsubstep == 100) {
+                        //audio = new Audio(fbdf_audio[i - 1])
+                        //  audio.play();
+                        let player = document.getElementById('radio');
+                        player.pause()
+                        player.src = fbdf_audio[i - 1];
+                        // player.play()
+                    }
+                }
+
+
+
+                cs_count = cs_count + 1;
+
+
+
+
+            }
+            mg_points = []
+
+            var mg_from = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y, 0.00073);
+            var mg_to = new THREE.Vector3(meshk[i - 1].position.x- 0.5*mg_length_1, meshk[i - 1].position.y - 0.5*mg_length_1, 0.00073);
+
+            if (mg_shift_checker == 1) {
+                mg_to.x = mg_to.x + 1/6;
+                mg_from.x = mg_to.x;
+            }
+
+            mg_points.push(mg_from)
+            mg_points.push(mg_to)
+
+            const mg_geometry = new THREE.BufferGeometry().setFromPoints(mg_points);
+
+            //var mg_direction = mg_to.clone().sub(mg_from);
+            //var mg_length = mg_direction.length();
+            //var mg_arrow_direction = arrow_to[meshk[i - 1].position.x][meshk[i - 1].position.y - 1].clone().sub(arrow_from[meshk[i - 1].position.x][meshk[i - 1].position.y]);
+            //var mg_arrow_length = mg_direction.length();
+            //var mg_arrowHelper = new THREE.ArrowHelper(mg_direction.normalize(), mg_from, mg_length, 0xffffff);//0x0A9EFF
+
+            var mg_line = new THREE.Line(mg_geometry, mg_material);
+
+            mg_cone.position.x = mg_to.x; //changed from meshk[i - 1].position.x;
+            mg_cone.position.y = mg_to.y //+ mg_cone_shift; //changed from meshk[i - 1].position.y - 1.43;
+            mg_cone.position.z = 0
+            // if (arrow_to[i - 1][j].y < arrow_from[i - 1][j].y) {
+            mg_cone.rotation.z = 3*Math.PI/4
+            //}
+
+            //adding code for mg chotasphere on 30 June
+
+            const material_mg_chotasphere = new THREE.MeshBasicMaterial()
+            material_mg_chotasphere.color = new THREE.Color(0xffffff)
+            //materialfbd.transparent = true
+            //materialfbd.opacity = 0.8
+            var mg_chotasphere = new THREE.Mesh(
+                new THREE.SphereGeometry(0.1, 16, 16),
+                material_mg_chotasphere
+            )
+
+            mg_chotasphere.position.x = mg_from.x;
+            mg_chotasphere.position.y = mg_from.y;
+
+            if (step == "fbd" && substep == i && subsubstep == -300)
+                scene.add(mg_chotasphere)
+
+            // code for mg chotasphere ends
+
+            if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
+                scene.add(mg_line)
+                scene.add(mg_cone)
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //debugger
+        var chotasphere = []
+        var mg_cone
+        var mg_points
         var mg_material = new THREE.MeshBasicMaterial({color: 'white'})
 
         var cs_count = 0;
@@ -5322,7 +4349,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                 }
 
                 if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
-                    // scene.add(chotasphere[cs_count]);
+                    scene.add(chotasphere[cs_count]);
                     if (alld_question_no>60 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
@@ -5339,11 +4366,11 @@ if (answerClicked > 0 && iscorrect != 1) {
                         player.pause()
                         player.src = steptwo5;
                         player.play()
-                        if (iscorrect == 1) {
+                        if (answerClicked > 0 && iscorrect == 1) {
 
-                            let pplayer = document.getElementById('radio');
+                            let player = document.getElementById('radio');
                             player.pause()
-                            pplayer.src = fbdi_audio_after[i - 1];
+                            player.src = fbdi_audio_after[i - 1];
                             // player.play()
                         }
                     }
@@ -5375,7 +4402,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             mg_points = []
 
             var mg_from = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y, 0.00073);
-            var mg_to = new THREE.Vector3(meshk[i - 1].position.x, meshk[i - 1].position.y - mg_length_1, 0.00073);
+            var mg_to = new THREE.Vector3(meshk[i - 1].position.x+ 0.5*mg_length_1, meshk[i - 1].position.y - 0.5*mg_length_1, 0.00073);
 
             if (mg_shift_checker == 1) {
                 mg_to.x = mg_to.x + 1/6;
@@ -5399,7 +4426,7 @@ if (answerClicked > 0 && iscorrect != 1) {
             mg_cone.position.y = mg_to.y //+ mg_cone_shift; //changed from meshk[i - 1].position.y - 1.43;
             mg_cone.position.z = 0
             // if (arrow_to[i - 1][j].y < arrow_from[i - 1][j].y) {
-            mg_cone.rotation.z = Math.PI
+            mg_cone.rotation.z = 5*Math.PI/4
             //}
 
             //adding code for mg chotasphere on 30 June
@@ -5427,6 +4454,13 @@ if (answerClicked > 0 && iscorrect != 1) {
             }
 
         }
+
+
+
+
+
+
+
 
         const materialcs_cu = new THREE.MeshBasicMaterial()
         materialcs_cu.color = new THREE.Color(0xffffff)
@@ -5826,7 +4860,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
                 if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == -300)) {
                     // scene.add(chotasphere[cs_count]);
-                    if (alldata["bigblock dick"] != undefined && bigblockdata.mass!=0 && subsubstep != -100) {
+                    if (bigblockdata.mass!=0 && subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -5835,7 +4869,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                         // player.play()
 
                     }
-                    if (alldata["bigblock dick"] != undefined && bigblockdata.mass!=0 && subsubstep == -100) {
+                    if (bigblockdata.mass!=0 && subsubstep == -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
                         // audio.play();
                         let player = document.getElementById('radio');
@@ -6040,12 +5074,7 @@ if (answerClicked > 0 && iscorrect != 1) {
 
 
                     }
-                    if(alld_question_no==68 && substep==1 && subsubstep==1 && step=="constraint"){
-                        pull.position.x=pull_x;
-                        redb.position.x=redb_x;
-                        meshbb2.position.x = xyz;
-                    }
-                    
+
                     /*
                     if (bigblockdata.mass != 0) {
                         meshbb.position.x = bb_ini_pos_x;
@@ -6246,7 +5275,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                                 if(alld_question_no>60){
-                                    if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
+                                    if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
                                         meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                         meshbb3.position.x=meshp[i - 1].position.x;
@@ -6261,7 +5290,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                         if(alld_question_no>60){
-                            if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
+                            if(i==1 && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
                                 meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                 meshbb3.position.x=meshp[i - 1].position.x;
@@ -6271,7 +5300,6 @@ if (answerClicked > 0 && iscorrect != 1) {
                             }
                         }
                     }
-                    
                 }
             }
             // 22June change code ends manglik
@@ -6280,14 +5308,13 @@ if (answerClicked > 0 && iscorrect != 1) {
                         meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                         if(alld_question_no>60){
-                            if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
+                            if(i==1 && bigblockdata.mass>0){
                                 meshbb.position.x=meshp[i - 1].position.x-3.8;
                                 meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                 meshbb3.position.x=meshp[i - 1].position.x;
                             }
                         }
                     }
-                    
 
                     if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>")) {
                         if (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>") {
@@ -6295,7 +5322,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                                 if(alld_question_no>60){
-                                    if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
+                                    if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
                                         meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                         meshbb3.position.x=meshp[i - 1].position.x;
@@ -6309,7 +5336,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                 meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
                                 meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
                                 if(alld_question_no>60){
-                                    if(i==1 && alldata["bigblock dick"] != undefined && bigblockdata.mass>0){
+                                    if(i==1 && bigblockdata.mass>0){
                                         meshbb.position.x=meshp[i - 1].position.x-3.8;
                                         meshbb2.position.x=meshp[i - 1].position.x+3.5;
                                         meshbb3.position.x=meshp[i - 1].position.x;
@@ -6319,19 +5346,8 @@ if (answerClicked > 0 && iscorrect != 1) {
                         }
                     }
                 }
-                if(alld_question_no==68 && substep == 1 && subsubstep==1){
-                    // Later, when you want to update the values of temp and gg2
-                    meshbb2.position.x=meshbb2.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                    pull.position.x=pull.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                    redb.position.x=redb.position.x + 0.5 * (3.82) * time_main * time_main / 5000;
-                    temp.x = tempx + pull.position.x - pull_x;
 
-                    gg2.x = gg2x + pull.position.x - pull_x;
-
-                    // Update the geometry of linex with the new values
-                    linex.geometry.setFromPoints([temp, gg2]);
-                }
-                /* 
+                /*
                 if (bigblockdata.mass != 0) {
                     time_main = elapsedTime - Time_tillnow;
                     if (step == "motion" || (step == "constraint" && subsubstep == -1)) {
@@ -6610,7 +5626,13 @@ if (answerClicked > 0 && iscorrect != 1) {
         mountRef.current.appendChild(renderer.domElement);
         return  () => mountRef.current.removeChild(renderer.domElement);
                       
-    }, [props]);
+    }
+catch  (error){
+
+    navigate('/error')
+    console.log(error.message);
+}
+}, [props]);
 
     return (
         <div ref={mountRef}>
